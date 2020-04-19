@@ -42,12 +42,23 @@ body {
     border-style: solid;
     margin: 0 auto;
     padding:0;
+    perspective: 1000px;
 }
 .grid-item-lg {
     border-width: 2px;
     border-color: rgba(112,112,112);
     border-style: solid;
     border-radius: 3px;
+    transform: scale(1);
+    background-color: #ffffff;
+}
+
+.grid-item-lg:active {
+    transform: scale(.97);
+    transition: transform .2s;
+    border-width: 2px;
+    border-color: rgba(112,112,112);
+    border-style: solid;
 }
 .tiles-lg {
     display: grid;
