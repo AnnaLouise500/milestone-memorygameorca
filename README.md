@@ -7,9 +7,8 @@ Memory Game for Orca Raffle - Milestone Project 2 for FSD Course
 <li>The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
 chance of winning.</li>
 <li>They draw the winner by picking a number at random, live on their website.</li> 
-<li>To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a 
-customer has paid for their tickets</li>
-  <li>If the customer does not pass the game, they will not be entered into the prize draw</li>
+<li>To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets</li>
+<li>If the customer does not pass the game, they will not be entered into the prize draw</li>
 
 ## Requirements
 <li>The pass rate of this game needs to be less than 85%</li>
