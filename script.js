@@ -3,6 +3,7 @@ var downloadTimer = setInterval(function(){
   if(timeleft <= 0){
     clearInterval(downloadTimer);
     document.getElementById("countdown").innerHTML = "0s";
+    window.location.replace("/homepage.html");
   } else {
     document.getElementById("countdown").innerHTML = timeleft + "s";
   }
