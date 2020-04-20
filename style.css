@@ -120,3 +120,32 @@ body {
     grid-gap: 5px;
     
 }
+/*BUTTONS*/
+.dynamic-button {
+    width: 100%;
+    height: 80px;
+
+    margin-top: 35px;
+    text-align: center;
+    padding: 0;
+}
+.begin-next {
+    width: 200px;
+    height: 46px;
+    border: none;
+    background-color: #DCDFDF;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #707070;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26) ;
+}
+.take-me-back {
+    width: 100%;
+    text-align: center;
+}
+.back-home {
+    border: none;
+    background-color: #ffffff;
+    text-decoration: underline;
+    font-size: 10px;
+}

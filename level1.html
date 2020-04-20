@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Orca Raffle - Memory Game Level 1</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
 
@@ -17,28 +18,35 @@
 
 <!--Level 1 title-->
 <div class="level-title">
-    <h1>LEVEL 1.</h1>
+    <h1>LEVEL 1</h1>
 </div>
 
 <!--Memory Game-->
 <div class="memory-game-lg">
     <div class="tiles-lg">
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
-        <div class="grid-item-lg"></div>
+        <!--onclick temporary to give owners an idea of what the final product will look like-->
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg correct" onclick="style.backgroundColor='#007475'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg correct" onclick="style.backgroundColor='#007475'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg correct" onclick="style.backgroundColor='#007475'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg incorrect" onclick="style.backgroundColor='#FF3D00'"></div>
+        <div class="grid-item-lg correct" onclick="style.backgroundColor='#007475'"></div>
+        <div class="grid-item-lg correct" onclick="style.backgroundColor='#007475'"></div>
     </div>    
 </div>
 
 <!--Button-->
+<div class="dynamic-button">
+    <button class="begin-next">BEGIN</button>
+</div>
+<div class="take-me-back">
+    <button class="back-home">I DO NOT WANT TO ENTER THE PRIZE DRAW</button>
+</div>
 
 <!--JS Script/s--> 
     <script src="script.js"></script>
