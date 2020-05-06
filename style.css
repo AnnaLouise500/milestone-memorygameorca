@@ -186,3 +186,25 @@ body {
     margin: 0;
     padding: 0;
 }
+.tile {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+}
+
+/*Fade in Fade out after click "begin"*/
+.active {
+    opacity: 0;
+    animation: fadeinout;
+    animation-duration: 4s;
+    background-color: rgba(0,116,117,.86);
+    border: 2px solid rgba(112,112,112);
+}
+@keyframes fadeinout {
+    0, 100% {opacity:0}
+    50% {opacity: 1}
+}
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
