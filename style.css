@@ -212,7 +212,6 @@ body {
 
   /*Get ready modal*/
   .get-ready-modal {
-    
     padding: 10px;
     height: 130px;
     width:300px;
@@ -260,11 +259,34 @@ body {
     position: fixed;
     top: 0;
     text-align: center;
-    display: none;
+    display: block;
 }
 .countdown-modal-open {
-
+    animation: fadein;
+    animation-duration: 1s;
 }
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.countdown-modal-close {
+    animation: fadeout;
+    animation-duration: 1s;
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 /*
 .countdown-modal-close {
     display: block;
