@@ -17,12 +17,17 @@ function showCorrect(el) {
             el.classList.remove('active'); //remove "active" animation class
             begin.removeEventListener('click', showCorrect); //remove begin button event listener
         },2000); //2 seconds after the class is added
-    })
+    modalStart()
+      })
 }
 
 //countdown modal start
-//need to add class countdown-modal-open
-//need to have an event listener for the above function ending
+function modalStart() {
+  countdown.classList.add('countdown-modal-open');
+  document.getElementById('countdown-backdrop').style.display = "block";
+  //call countdown modal duration
+}
+
 
 //countdown modal duration
 var countdown = document.getElementById("countdown-backdrop");
@@ -31,10 +36,12 @@ var downloadTimer = setInterval(function(){
   if(timeleft <= 0){ //when the timer hits 0
     clearInterval(downloadTimer);
     document.getElementById("countdown-modal").innerHTML = "0"; //show 0s seconds remaining
+      setTimeout(function(){
+        document.getElementById('countdown-backdrop').style.display = "none"; //display content
+      },900);
     closeModal(); //call modal close function
   } else {
     document.getElementById("countdown-modal").innerHTML = timeleft; //show time remaining
-    document.getElementById('countdown-backdrop').style.display = "block"; //display content
   }
   timeleft -= 1;
 }, 1000); // use seconds
