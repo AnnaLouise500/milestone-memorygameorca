@@ -1,20 +1,29 @@
 //begin button clicked - display correct combination
 
-//get the correct tiles
-var correct = document.getElementsByClassName('correct');
-
 //get the begin button
 var begin = document.getElementById('begin');
 
 //listen for begin click
 begin.addEventListener('click', showCorrect);
 
+//get the correct tiles
+var correctTiles = document.getElementsByClassName('grid-item-lg correct');
+console.log(correctTiles);
+console.log(correctTiles.classList);
+
 //function to display combination
 function showCorrect() {
-    Array.from(correct).forEach((element) => {
-        console.log("hello");
-    })
+    //add a class to all divs with the class "correct"
 }
+
+//cycle through array
+Array.from(correctTiles).forEach(showCorrect); 
+
+
+
+
+
+
 
 
 
