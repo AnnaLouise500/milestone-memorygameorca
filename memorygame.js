@@ -1,4 +1,4 @@
-//begin button clicked - display correct combination
+//BEGIN button clicked - display correct combination
 
 //get the begin button
 var begin = document.getElementById('begin');
@@ -12,12 +12,18 @@ console.log(correctTiles);
 console.log(correctTiles.classList);
 
 //function to display combination
-function showCorrect() {
-    //add a class to all divs with the class "correct"
+function showCorrect(el) {
+    Array.from(correctTiles).forEach(function(el) {
+        el.classList.add("active");
+        setTimeout(function(){
+            el.classList.remove('active');
+            begin.removeEventListener('click', showCorrect);
+        },2000);
+    })
+    
 }
 
-//cycle through array
-Array.from(correctTiles).forEach(showCorrect); 
+
 
 
 

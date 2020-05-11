@@ -34,6 +34,7 @@ body {
 }
 
 /*Memory Game Level 1*/
+
 .memory-game-lg {
     width: 340px;
     height: 430px;
@@ -196,7 +197,7 @@ body {
 .active {
     opacity: 0;
     animation: fadeinout;
-    animation-duration: 4s;
+    animation-duration: 3s;
     background-color: rgba(0,116,117,.86);
     border: 2px solid rgba(112,112,112);
 }
