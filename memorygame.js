@@ -62,38 +62,39 @@ function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
-    clickTiles();
+    tileClick();
 }
 
 //register tile click
-allTiles.addEventListener('click', tileClick)
+
 
 //background colour change on correct tiles
- function tileClick() {
-  if {
-    
-    Array.from(correctTiles).forEach(function(el) {
-      correctTiles.classList.add('correct-color');
+ function tileClick(){
+   Array.from.allTiles.forEach(function(el) {
+  if(el.classList.contains('correct')) {
+    //the tile clicked had a class of 'correct
+    el.classList.add('correct-color');
   }
-  
-  })
- 
-  //if user clicks incorrectTiles then change the background colour to red + lose life
-  //if user clicks correctTiles then change the background colour to blue until all clicked
-};
+  else {
+    //if incorrect tile clicked
+      incorrectTiles.classList.add('incorrect-colour');
+      lifeCounter();
+  }
+})
+}
 
 
 //life counter
 var lifeCount = 1;
 
 function lifeCounter() {
-if(lifeCount <= -1){
-  document.getElementById("life-count").innerHTML = "GAME OVER";
-}
-else {
-  document.getElementById("life-count").innerHTML = lifeCount; //show number of lives
-}
-}
+    if(lifeCount <= -1){
+      //game over modal pop up
+    }
+    else {
+      //remove a life off of life counter
+    }
+  }
 
 
 

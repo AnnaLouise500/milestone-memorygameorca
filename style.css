@@ -12,7 +12,6 @@ body {
 }
 .orca {
     height: 80px;
-    position: ;
     margin: 0, auto;
 }
 .logo {
@@ -201,7 +200,7 @@ body {
     border: 2px solid rgba(112,112,112);
 }
 @keyframes fadeinout {
-    0, 100% {opacity:0}
+    0%, 100% {opacity:0}
     50% {opacity: 1}
 }
 @-webkit-keyframes fadeinout {
