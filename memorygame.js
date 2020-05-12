@@ -9,6 +9,9 @@ begin.addEventListener('click', showCorrect);
 //get the correct tiles
 var correctTiles = document.getElementsByClassName('grid-item-lg correct');
 
+//countdown variable
+var countdown = document.getElementById("countdown-backdrop");
+
 //function to display combination
 function showCorrect(el) {
     Array.from(correctTiles).forEach(function(el) {
@@ -26,7 +29,7 @@ function showCorrect(el) {
 function modalStart() {
 
 //countdown modal duration
-var countdown = document.getElementById("countdown-backdrop");
+
 var modal = document.getElementById("countdown-modal-div");
 countdown.classList.add('countdown-modal-open');
 modal.style.display="block";
@@ -51,10 +54,9 @@ var downloadTimer = setInterval(function(){
 //countdown modal close function
 function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
-    countdown.classList.add('countdown-modal-close') //add close class to countdown-backdrop
+    countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
 }
-
 
 //user clicking buttons
 var tiles = document.getElementsByClassName('grid-item-lg');
