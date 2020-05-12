@@ -212,6 +212,7 @@ body {
 
   /*Get ready modal*/
   .get-ready-modal {
+    display: none;
     padding: 10px;
     height: 130px;
     width:300px;
@@ -259,7 +260,6 @@ body {
     position: fixed;
     top: 0;
     text-align: center;
-    display: block;
 }
 .countdown-modal-open {
     animation: fadein;

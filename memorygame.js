@@ -16,28 +16,29 @@ function showCorrect(el) {
         setTimeout(function(){
             el.classList.remove('active'); //remove "active" animation class
             begin.removeEventListener('click', showCorrect); //remove begin button event listener
+            modalStart()
         },2000); //2 seconds after the class is added
-    modalStart()
+    
       })
 }
 
 //countdown modal start
 function modalStart() {
-  countdown.classList.add('countdown-modal-open');
-  document.getElementById('countdown-backdrop').style.display = "block";
-  //call countdown modal duration
-}
-
 
 //countdown modal duration
 var countdown = document.getElementById("countdown-backdrop");
+var modal = document.getElementById("countdown-modal-div");
+countdown.classList.add('countdown-modal-open');
+modal.style.display="block";
+document.getElementById('countdown-backdrop').style.display ="block";
+
 var timeleft = 3;
 var downloadTimer = setInterval(function(){
   if(timeleft <= 0){ //when the timer hits 0
     clearInterval(downloadTimer);
     document.getElementById("countdown-modal").innerHTML = "0"; //show 0s seconds remaining
       setTimeout(function(){
-        document.getElementById('countdown-backdrop').style.display = "none"; //display content
+        document.getElementById('countdown-backdrop').style.display = "none"; //hide content
       },900);
     closeModal(); //call modal close function
   } else {
@@ -45,11 +46,24 @@ var downloadTimer = setInterval(function(){
   }
   timeleft -= 1;
 }, 1000); // use seconds
+}
 
 //countdown modal close function
 function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
     countdown.classList.add('countdown-modal-close') //add close class to countdown-backdrop
+    document.getElementById("begin").innerHTML = "GO!";
+}
+
+
+//user clicking buttons
+var tiles = document.getElementsByClassName('grid-item-lg');
+//var correctTiles defined earlier
+var incorrectTiles = document.getElementsByClassName('grid-item-lg incorrect');
+
+function clickTiles() {
+  //if user clicks incorrectTiles then change the background colour to red + lose life
+  //if user clicks correctTiles then change the background colour to blue until all clicked
 }
 
 
