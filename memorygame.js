@@ -6,6 +6,8 @@ var begin = document.getElementById('begin');
 //listen for begin click
 begin.addEventListener('click', showCorrect);
 
+//get all tiles
+var allTiles = document.getElementsByClassName('grid-item-lg');
 //get the correct tiles
 var correctTiles = document.getElementsByClassName('grid-item-lg correct');
 //get the incorrect tiles
@@ -63,15 +65,17 @@ function closeModal(){
     clickTiles();
 }
 
-
-
-//add correct click event listener
-
+//register tile click
+allTiles.addEventListener('click', tileClick)
 
 //background colour change on correct tiles
- function correct() {
-  Array.from(correctTiles).forEach(function(el) {
-    correctTiles.classList.add('correct-color');
+ function tileClick() {
+  if {
+    
+    Array.from(correctTiles).forEach(function(el) {
+      correctTiles.classList.add('correct-color');
+  }
+  
   })
  
   //if user clicks incorrectTiles then change the background colour to red + lose life
