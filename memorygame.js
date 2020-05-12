@@ -1,4 +1,4 @@
-//BEGIN button clicked - display correct combination
+//GLOBAL VARIABLES
 
 //get the begin button
 var begin = document.getElementById('begin');
@@ -8,9 +8,13 @@ begin.addEventListener('click', showCorrect);
 
 //get the correct tiles
 var correctTiles = document.getElementsByClassName('grid-item-lg correct');
+//get the incorrect tiles
+var incorrectTiles = document.getElementsByClassName('grid-item-lg incorrect');
 
 //countdown variable
 var countdown = document.getElementById("countdown-backdrop");
+
+
 
 //function to display combination
 function showCorrect(el) {
@@ -56,20 +60,36 @@ function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
+    clickTiles();
 }
 
-//user clicking buttons
-var tiles = document.getElementsByClassName('grid-item-lg');
-//var correctTiles defined earlier
-var incorrectTiles = document.getElementsByClassName('grid-item-lg incorrect');
 
-function clickTiles() {
+
+//add correct click event listener
+
+
+//background colour change on correct tiles
+ function correct() {
+  Array.from(correctTiles).forEach(function(el) {
+    correctTiles.classList.add('correct-color');
+  })
+ 
   //if user clicks incorrectTiles then change the background colour to red + lose life
   //if user clicks correctTiles then change the background colour to blue until all clicked
+};
+
+
+//life counter
+var lifeCount = 1;
+
+function lifeCounter() {
+if(lifeCount <= -1){
+  document.getElementById("life-count").innerHTML = "GAME OVER";
 }
-
-
-
+else {
+  document.getElementById("life-count").innerHTML = lifeCount; //show number of lives
+}
+}
 
 
 

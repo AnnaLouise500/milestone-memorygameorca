@@ -9,7 +9,6 @@ body {
     background-color:rgba(91,105,106,.21);
     margin: 0;
     padding-top: 20px;
-    text-align: center;
 }
 .orca {
     height: 80px;
@@ -215,7 +214,7 @@ body {
     display: none;
     padding: 10px;
     height: 130px;
-    width:300px;
+    width:280px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
     background-color: rgba(0,116,117,.86);
@@ -223,7 +222,7 @@ body {
     position: absolute;
     z-index: 1;
     text-align: center;
-    top: 30%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
@@ -287,17 +286,8 @@ body {
     }
 }
 
-/*
-.countdown-modal-close {
-    display: block;
-    animation: fadeout;
-    animation-duration: 1s;
+
+.correct-color {
+    background-color:  rgba(0,116,117,.86);
 }
-@keyframes fadeout {
-    100% {opacity:0}
-    0% {opacity: 1}
-}
-@-webkit-keyframes fadeout {
-    100% { opacity: 0; }
-    0% { opacity: 1; }
-  }
+
