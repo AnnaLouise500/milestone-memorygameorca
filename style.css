@@ -9,6 +9,7 @@ body {
     background-color:rgba(91,105,106,.21);
     margin: 0;
     padding-top: 20px;
+    display: inline-block;
 }
 .orca {
     height: 80px;
@@ -25,10 +26,15 @@ body {
     padding-left: 0;  
 }
 .level-title {
+    
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 30;
     text-align: center;
     color: rgb(112,112,112);
+    
+}
+.lifebar {
+    
 }
 
 /*Memory Game Level 1*/
@@ -149,42 +155,7 @@ body {
     font-size: 10px;
 }
 
-/*Pop up redirect test*/
-.modal-container {
- width: 100%;
-}
-.modal {
-    top: 300px;
-    padding: 10px;
-    height: 100px;
-    width:200px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    background-color: rgba(0,116,117,.86);
-    border: 5px solid white;
-    position: relative;
-    margin: 0 auto;
-}
-.modal h1 {
-    margin:0;
-    text-align: center;
-    padding-top: 10px;
-    color: #FFED7E;
-    font-weight: 500;
-    margin-bottom: 3px;
-}
-.modal p {
-    text-align: center;
-    color: white;
-    font-size: 13px;
-    margin-top: 0px;
-}
-#countdown {
-    font-size: 8px;
-    float:right;
-    margin: 0;
-    padding: 0;
-}
+
 .tile {
     height: 100%;
     width: 100%;
@@ -221,7 +192,7 @@ body {
     position: absolute;
     z-index: 1;
     text-align: center;
-    top: 40%;
+    top: 40%; /*25% for desktop*/
     left: 50%;
     transform: translate(-50%,-50%);
     -ms-transform: translate(-50%,-50%);
@@ -271,7 +242,6 @@ body {
         opacity: 1
     }
 }
-
 .countdown-modal-close {
     animation: fadeout;
     animation-duration: 1s;
@@ -290,3 +260,80 @@ body {
     background-color:  rgba(0,116,117,.86);
 }
 
+/*life count bar, top right-hand corner of page*/
+.life-count {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 40px;
+    float: right;
+    position: relative;
+    top: -70px;
+    border: 2px solid rgb(112,112,112);
+    border-radius: 20%;
+    background-color:  rgba(0,116,117,.86);
+    color: white;
+    margin-right: 30px;
+}
+
+/*Game Over modal*/
+.gameover-modal-open {
+    animation: fadein;
+    animation-duration: 1s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+       opacity: 1
+    }
+}
+/*Pop up redirect - lose*/
+.modal-container {
+    width: 100%;
+   }
+   .gameover-modal {
+       display: none;
+       top: 300px;
+       padding: 10px;
+       height: 100px;
+       width:200px;
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 10px;
+       background-color: rgba(0,116,117,.86);
+       border: 5px solid white;
+       position: relative;
+       margin: 0 auto;
+   }
+   #gameover-backdrop {
+       display: none;
+       width: 100%;
+       height: 100%;
+       z-index: 2;
+       background: rgba(0, 0, 0, .3);
+       border: none;
+       position: fixed;
+       top: 0;
+       text-align: center;
+   }
+   .gameover-modal h1 {
+       margin:0;
+       text-align: center;
+       padding-top: 10px;
+       color: #FFED7E;
+       font-weight: 500;
+       margin-bottom: 3px;
+   }
+   .gameover-modal p {
+       text-align: center;
+       color: white;
+       font-size: 13px;
+       margin-top: 0px;
+   }
+   #gameover {
+       font-size: 8px;
+       float:right;
+       margin: 0;
+       padding: 0;
+   }

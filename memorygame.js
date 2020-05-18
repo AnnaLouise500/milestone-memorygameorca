@@ -25,14 +25,14 @@ function showCorrect(el) {
         setTimeout(function(){
             el.classList.remove('active'); //remove "active" animation class
             begin.removeEventListener('click', showCorrect); //remove begin button event listener
-            modalStart()
+            countdownModalStart()
         },2000); //2 seconds after the class is added
     
       })
 }
 
 //countdown modal start
-function modalStart() {
+function countdownModalStart() {
 
 //countdown modal duration
 
@@ -62,11 +62,16 @@ function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
-    tileClick();
+    lifeCounter();
 }
+/* THIS DOESN'T WORK YET!
 
-//register tile click
-
+//register tile click (add event listener to all grid-item-lg)
+function listenForClickTiles() {
+  document.getElementsByClassName("grid-item-lg").forEach(item => {
+  item.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
+})
+}
 
 //background colour change on correct tiles
  function tileClick(){
@@ -78,57 +83,44 @@ function closeModal(){
   else {
     //if incorrect tile clicked
       incorrectTiles.classList.add('incorrect-colour');
-      lifeCounter();
   }
-})
+});
 }
 
+*/
 
 //life counter
-var lifeCount = 1;
+
+var lifeCount = document.getElementById('life-count').value;
 
 function lifeCounter() {
-    if(lifeCount <= -1){
-      //game over modal pop up
+    if(lifeCount <= 0){
+      gameoverModalStart(); //tested by calling in closeModal function - this function works
     }
     else {
-      //remove a life off of life counter
+      lifeCount--;
     }
   }
 
+//game over modal start - function tested and works perfectly
+function gameoverModalStart() {
 
+//gameover modal duration 
 
+var gameoverModal = document.getElementById("gameover-modal");
+gameoverModal.classList.add('gameover-modal-open');
+gameoverModal.style.display="block";
+document.getElementById('gameover-backdrop').style.display ="block";
 
-
-
-
-/*
-1) Click begin
-2) "Correct" tiles fadein and fade out (3s total)
-3) Count down modal appears
-4) Count down modal disappears
-
---
-
-5) User clicks correct tile
-6) Tile changes to blue
-
-OR
-
-7) User clicks incorrect tile
-8) Life counter decreases by one
-9) Tile turns red
-
---
-
-10) User passes 
-11) Congratulations click to continue modal appears
-12) User clicks continue
-13) Level 2 loads
-
-OR
-
-14) User does not pass level 
-15) Oh no modal appears
-16) Modal counts down from 5s and redirects to homepage
-*/
+var timeleft = 5;
+  var downloadTimer = setInterval(function(){
+  if(timeleft <= 0){ //when the timer hits 0
+    clearInterval(downloadTimer);
+    document.getElementById("gameover").innerHTML = "0s"; //show 0s seconds remaining
+    window.location.replace("https://www.orcaraffle.com"); //redirect to url (replace means they cant hit back)
+  } else {
+    document.getElementById("gameover").innerHTML = timeleft + "s"; //show time remaining
+  }
+  timeleft -= 1;
+}, 1000); // use seconds
+}
