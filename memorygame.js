@@ -66,9 +66,6 @@ function closeModal(){
     listenForClickTiles();
 }
 
-
-//BREAK
-
 //get all tiles
 var allTiles = $('.grid-item-lg');
 
@@ -101,7 +98,7 @@ var lifeCount = document.getElementById('life-count').value;
 
 function lifeCounter() {
     if(lifeCount <= 0){
-      //gameoverModalStart(); //tested by calling in closeModal function - this function works
+      gameoverModalStart(); //tested by calling in closeModal function - this function works
     }
     else {
       lifeCount--;
