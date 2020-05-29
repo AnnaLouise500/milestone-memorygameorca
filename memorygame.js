@@ -63,33 +63,32 @@ function closeModal(){
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
     lifeCounter();
-    tileClick();
+    listenForClickTiles();
 }
 
 
 //BREAK
 
-var testTile = document.getElementById('testTile');
+//get all tiles
+var allTiles = document.getElementsByClassName('grid-item-lg');
 
-testTile.addEventListener('click', tileClick);
-
-/*register tile click (add event listener to all grid-item-lg)
+//register tile click (add event listener to all grid-item-lg)
 function listenForClickTiles() {
-  document.getElementsByClassName("grid-item-lg").forEach(element => {
+  $(".grid-item-lg").forEach(element => {
   element.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
 })
-}*/
+}
 
 //background colour change on correct tiles
  function tileClick(){
-   Array.from.allTiles.forEach(function(el) {
-  if(el.classList.contains('correct')) {
+   Array.from(allTiles).forEach(function(el) {
+  if(testTile.classList.contains('correct')) {
     //the tile clicked had a class of 'correct
-    el.classList.add('correct-color');
+    testTile.classList.add('correct-color');
   }
   else {
     //if incorrect tile clicked
-      incorrectTiles.classList.add('incorrect-colour');
+      testTile.classList.add('incorrect-colour');
   }
 });
 }
