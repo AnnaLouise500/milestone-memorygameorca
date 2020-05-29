@@ -255,7 +255,9 @@ body {
     }
 }
 
-
+.incorrect-color {
+    background-color: rgb(143, 12, 0);
+}
 .correct-color {
     background-color:  rgba(0,116,117,.86);
 }

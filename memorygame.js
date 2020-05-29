@@ -63,15 +63,22 @@ function closeModal(){
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
     lifeCounter();
+    tileClick();
 }
-/* THIS DOESN'T WORK YET!
 
-//register tile click (add event listener to all grid-item-lg)
+
+//BREAK
+
+var testTile = document.getElementById('testTile');
+
+testTile.addEventListener('click', tileClick);
+
+/*register tile click (add event listener to all grid-item-lg)
 function listenForClickTiles() {
-  document.getElementsByClassName("grid-item-lg").forEach(item => {
-  item.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
+  document.getElementsByClassName("grid-item-lg").forEach(element => {
+  element.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
 })
-}
+}*/
 
 //background colour change on correct tiles
  function tileClick(){
@@ -87,7 +94,7 @@ function listenForClickTiles() {
 });
 }
 
-*/
+
 
 //life counter
 
@@ -95,7 +102,7 @@ var lifeCount = document.getElementById('life-count').value;
 
 function lifeCounter() {
     if(lifeCount <= 0){
-      gameoverModalStart(); //tested by calling in closeModal function - this function works
+      //gameoverModalStart(); //tested by calling in closeModal function - this function works
     }
     else {
       lifeCount--;
