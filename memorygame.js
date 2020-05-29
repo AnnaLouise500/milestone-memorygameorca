@@ -7,7 +7,7 @@ var begin = document.getElementById('begin');
 begin.addEventListener('click', showCorrect);
 
 //get all tiles
-var allTiles = document.getElementsByClassName('grid-item-lg');
+var allTiles = $('.grid-item-lg');
 //get the correct tiles
 var correctTiles = document.getElementsByClassName('grid-item-lg correct');
 //get the incorrect tiles
@@ -62,46 +62,55 @@ function closeModal(){
     countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
     countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
     document.getElementById("begin").innerHTML = "GO!";
-    lifeCounter();
+    
     listenForClickTiles();
 }
-
-//get all tiles
-var allTiles = $('.grid-item-lg');
 
 //register tile click (add event listener to all grid-item-lg)
 function listenForClickTiles() {
   Array.from(allTiles).forEach(function(element){
-  element.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
+  element.addEventListener('click', addClick); //if any tile is clicked run addClick function
 })
 }
 
+//tile has been clicked
+function addClick(){
+    $(this).addClass('clicked');
+    tileClickColorChange();
+  }
+
 //background colour change on correct tiles
- function tileClick(){
-   Array.from(allTiles).forEach(function(el) {
-  if(el.classList.contains('correct')) {
-    //the tile clicked had a class of 'correct
-    el.classList.add('correct-color');
-  }
-  else {
-    //if incorrect tile clicked
-      el.classList.add('incorrect-colour');
-  }
-});
+function tileClickColorChange() {
+ $('.grid-item-lg').each(function(){
+   if ($(this).hasClass('correct clicked')){
+      $(this).addClass('correct-color');
+   }
+   else {
+     if ($(this).hasClass('incorrect clicked')){
+       $(this).addClass('incorrect-color');
+       lifeCounterDecrease();
+     }
+   }
+ })
 }
+var lifeCount = document.getElementById('life-count').value;
 
-
+//life count decrease - isn't decreasing value by 1 for some reason!
+function lifeCounterDecrease() {
+  $('.incorrect-color').each(function(){
+      lifeCount--;
+      document.getElementById('life-count').value = lifeCount;
+      console.log(lifeCount);
+    })
+}
+  
 
 //life counter
 
-var lifeCount = document.getElementById('life-count').value;
-
 function lifeCounter() {
-    if(lifeCount <= 0){
-      gameoverModalStart(); //tested by calling in closeModal function - this function works
-    }
-    else {
-      lifeCount--;
+  
+    if(lifeCount = 0){
+     gameoverModalStart(); //tested by calling in closeModal function - this function works
     }
   }
 
