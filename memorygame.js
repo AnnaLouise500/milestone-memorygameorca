@@ -70,11 +70,11 @@ function closeModal(){
 //BREAK
 
 //get all tiles
-var allTiles = document.getElementsByClassName('grid-item-lg');
+var allTiles = $('.grid-item-lg');
 
 //register tile click (add event listener to all grid-item-lg)
 function listenForClickTiles() {
-  $(".grid-item-lg").forEach(element => {
+  Array.from(allTiles).forEach(function(element){
   element.addEventListener('click', tileClick); //if any tile is clicked run tileClick function
 })
 }
@@ -82,13 +82,13 @@ function listenForClickTiles() {
 //background colour change on correct tiles
  function tileClick(){
    Array.from(allTiles).forEach(function(el) {
-  if(testTile.classList.contains('correct')) {
+  if(el.classList.contains('correct')) {
     //the tile clicked had a class of 'correct
-    testTile.classList.add('correct-color');
+    el.classList.add('correct-color');
   }
   else {
     //if incorrect tile clicked
-      testTile.classList.add('incorrect-colour');
+      el.classList.add('incorrect-colour');
   }
 });
 }
