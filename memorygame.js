@@ -9,9 +9,9 @@ begin.addEventListener('click', showCorrect);
 //get all tiles
 var allTiles = $('.grid-item-lg');
 //get the correct tiles
-var correctTiles = document.getElementsByClassName('grid-item-lg correct');
+var correctTiles = $('.grid-item-lg.correct');
 //get the incorrect tiles
-var incorrectTiles = document.getElementsByClassName('grid-item-lg incorrect');
+var incorrectTiles = $('.grid-item-lg.incorrect');
 
 //countdown variable
 var countdown = document.getElementById("countdown-backdrop");
@@ -76,40 +76,51 @@ function listenForClickTiles() {
 //tile has been clicked
 function addClick(){
     $(this).addClass('clicked');
-    tileClickColorChange();
+    if($(this).hasClass('correct')){
+      tileClickColorChangeCorrect();
+    }
+    else {
+    tileClickColorChangeIncorrect();
+    }
   }
 
 //background colour change on correct tiles
-function tileClickColorChange() {
- $('.grid-item-lg').each(function(){
+function tileClickColorChangeCorrect() {
+    correctTiles.each(function(){
    if ($(this).hasClass('correct clicked')){
       $(this).addClass('correct-color');
+      console.log("correct color class added");
+      console.log(correctTiles);
    }
-   else {
-     if ($(this).hasClass('incorrect clicked')){
-       $(this).addClass('incorrect-color');
-       lifeCounterDecrease();
-     }
-   }
- })
+  })
 }
-var lifeCount = document.getElementById('life-count').value;
 
-//life count decrease - isn't decreasing value by 1 for some reason!
-function lifeCounterDecrease() {
-  $('.incorrect-color').each(function(){
-      lifeCount--;
-      document.getElementById('life-count').value = lifeCount;
-      console.log(lifeCount);
-    })
+function tileClickColorChangeIncorrect() {
+  incorrectTiles.each(function(){
+    var lifeCount = document.getElementById('life-count').value;{
+    if ($(this).hasClass('incorrect clicked')){
+      $(this).addClass('incorrect-color');
+      console.log("incorrect color class added");
+      console.log(incorrectTiles);
+      lifeCount--; //decrease life-count value by 1
+      console.log("life count decreased by 1");
+      document.getElementById('life-count').value = lifeCount; //return the new value
+      console.log("value updated");
+      console.log(lifeCounter);
+      $(this).removeClass('clicked');
+      $(this).addClass('life-lost');
+      console.log('clicked class removed life-lost class added');
+      lifeCounter();
+    } 
+    }
+  })
 }
-  
 
 //life counter
 
 function lifeCounter() {
-  
-    if(lifeCount = 0){
+  var lifeCount = document.getElementById('life-count').value;
+    if(lifeCount == 0){
      gameoverModalStart(); //tested by calling in closeModal function - this function works
     }
   }
