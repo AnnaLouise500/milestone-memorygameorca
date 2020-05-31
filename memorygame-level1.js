@@ -90,7 +90,11 @@ function tileClickColorChangeCorrect() {
    if ($(this).hasClass('correct clicked')){
       $(this).addClass('correct-color');
       console.log("correct color class added");
-      
+      $(this).removeClass('clicked');
+      $(this).addClass('life-not-lost')
+   }
+   if (!$(".correct").not(".life-not-lost").length){
+     nextLevel()
    }
   })
 }
@@ -144,3 +148,15 @@ var timeleft = 5;
   timeleft -= 1;
 }, 1000); // use seconds
 }
+
+//next level modal
+
+function nextLevel() {
+
+  //next level modal duration
+  
+  var nextLevel = document.getElementById("next-level");
+  countdown.classList.add('next-level-open');
+  nextLevel.style.display="block";
+  document.getElementById('next-level-backdrop').style.display ="block";
+  }

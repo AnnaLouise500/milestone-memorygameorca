@@ -168,7 +168,6 @@ body {
 .dynamic-button {
     width: 100%;
     height: 80px;
-
     margin-top: 35px;
     text-align: center;
     padding: 0;
@@ -337,3 +336,67 @@ body {
        margin: 0;
        padding: 0;
    }
+
+   /*Next Level Modal*/
+   #next-level-backdrop {
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background: rgba(0, 0, 0, .3);
+    border: none;
+    position: fixed;
+    top: 0;
+    text-align: center;
+   }
+   .next-level {
+    display: none;
+    top: 300px;
+    padding: 10px;
+    height: 100px;
+    width:200px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    background-color: rgba(0,116,117,.86);
+    border: 5px solid white;
+    position: relative;
+    margin: 0 auto;
+   }
+   .next {
+    width: 50%;
+    height: 40%;
+    margin-top: 2%;
+    border: none;
+    background-color: #DCDFDF;
+    font-size: 15px;
+    font-weight: bolder;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26) ;
+   }
+   .next-level-button {
+       text-decoration: none;
+       color: #707070;
+   }
+   .next-level-open {
+    animation: fadein;
+    animation-duration: 1s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1
+    }
+}
+.next-level-close {
+    animation: fadeout;
+    animation-duration: 1s;
+}
+@keyframes fadeout {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
