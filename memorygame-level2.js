@@ -7,11 +7,11 @@ var begin = document.getElementById('begin');
 begin.addEventListener('click', showCorrect);
 
 //get all tiles
-var allTiles = $('.grid-item-lg');
+var allTiles = $('.grid-item-md');
 //get the correct tiles
-var correctTiles = $('.grid-item-lg.correct');
+var correctTiles = $('.grid-item-md.correct');
 //get the incorrect tiles
-var incorrectTiles = $('.grid-item-lg.incorrect');
+var incorrectTiles = $('.grid-item-md.incorrect');
 
 //countdown variable
 var countdown = document.getElementById("countdown-backdrop");
@@ -66,7 +66,7 @@ function closeModal(){
     listenForClickTiles();
 }
 
-//register tile click (add event listener to all grid-item-lg)
+//register tile click
 function listenForClickTiles() {
   Array.from(allTiles).forEach(function(element){
   element.addEventListener('click', addClick); //if any tile is clicked run addClick function
@@ -90,26 +90,22 @@ function tileClickColorChangeCorrect() {
    if ($(this).hasClass('correct clicked')){
       $(this).addClass('correct-color');
       console.log("correct color class added");
-      console.log(correctTiles);
+      
    }
   })
 }
+
+//background colour change on correct tiles
 
 function tileClickColorChangeIncorrect() {
   incorrectTiles.each(function(){
     var lifeCount = document.getElementById('life-count').value;{
     if ($(this).hasClass('incorrect clicked')){
       $(this).addClass('incorrect-color');
-      console.log("incorrect color class added");
-      console.log(incorrectTiles);
       lifeCount--; //decrease life-count value by 1
-      console.log("life count decreased by 1");
       document.getElementById('life-count').value = lifeCount; //return the new value
-      console.log("value updated");
-      console.log(lifeCounter);
       $(this).removeClass('clicked');
       $(this).addClass('life-lost');
-      console.log('clicked class removed life-lost class added');
       lifeCounter();
     } 
     }
@@ -125,7 +121,8 @@ function lifeCounter() {
     }
   }
 
-//game over modal start - function tested and works perfectly
+//game over modal start
+
 function gameoverModalStart() {
 
 //gameover modal duration 
