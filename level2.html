@@ -92,5 +92,13 @@
 <!--JS Script/s--> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="memorygame-level2.js"></script>
+    <script>
+        $(document).ready(function() {
+            function disableBack() { window.history.forward() }
+    
+            window.onload = disableBack();
+            window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
+        });
+    </script>
 </body>
 </html>
