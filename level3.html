@@ -7,10 +7,14 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!--Header (Grey Banner and Orca Logo-->
+
+<!--Header (Grey Banner and Orca Logo-->
 <div class="header">
     <div class="logo">
         <img src="/assets/img/Orca Logo.png" alt="Orca Logo" class="orca">
+    </div>
+    <div class="lifebar">
+        <input value="3" max="3" id="life-count" class="life-count">
     </div>
 </div>
 
@@ -22,57 +26,89 @@
 <!--Memory Game-->
 <div class="memory-game-sm">
     <div class="tiles-sm">
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>
-        <div class="grid-item-sm"></div>        
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm correct"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>
+        <div class="grid-item-sm incorrect"></div>        
     </div>    
 </div>
+
+<!--Button-->
+<div class="dynamic-button">
+    <button class="begin-next" id="begin">BEGIN</button>
+</div>
+<div class="take-me-back">
+    <button class="back-home">
+        <a href="http://www.orcaraffle.com">I DO NOT WANT TO ENTER THE PRIZE DRAW</a>
+    </button>
+</div>
+
+<!--Get ready!-->
+<div id="countdown-backdrop">
+    <div id="countdown-modal-div" class="get-ready-modal">
+            <h1 class="modal-header">Get ready!</h1>
+            <p class="modal-body">Repeat the pattern which was just shown. Your life count is in the top, right-hand corner.</p>
+            <p value="0" max="5" id="countdown-modal" class="countdown-modal"></p>
+    </div>
+</div>
+
+<!--Game Over-->
+<div id="gameover-backdrop">
+    <div class="gameover-modal" id="gameover-modal">
+        <p value="0" max="5" id="gameover" class="gameover"></p>
+        <h1>Oh no!</h1>
+        <p>Unfortunately you haven't passed this time! You will now be redirected to our Homepage.</p>
+    </div>
+</div>
+
+
+
 <!--JS Script/s--> 
-    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/memorygame-level3.js"></script>
 </body>
 </html>
