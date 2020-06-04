@@ -110,7 +110,8 @@
     <div class="congratulations-modal" id="congratulations-modal">
         <p value="0" max="5" id="enter-draw" class="enter-draw"></p>
         <h1>Congratulations!</h1>
-        <p>Your tickets are now being entered into the draw. Bare with us whilst you're re-directed back to our Homepage. Thank you for playing!</p>
+        <p>Your tickets are now being entered into the draw.</p>
+        <div class="loader" id="loader"></div> <!--w3schools.com loader wheel-->
     </div>
 </div>
 
@@ -119,10 +120,9 @@
 <!--JS Script/s--> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="/memorygame-level3.js"></script>
-    <script>
+    <script> //stop users using the back/forward button to go to previous/next level
         $(document).ready(function() {
             function disableBack() { window.history.forward() }
-    
             window.onload = disableBack();
             window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
         });

@@ -90,7 +90,11 @@ function tileClickColorChangeCorrect() {
    if ($(this).hasClass('correct clicked')){
       $(this).addClass('correct-color');
       console.log("correct color class added");
-      
+      $(this).removeClass('clicked');
+      $(this).addClass('life-not-lost')
+   }
+   if (!$(".correct").not(".life-not-lost").length){
+     congratulationsRedirect();
    }
   })
 }
@@ -143,4 +147,22 @@ var timeleft = 5;
   }
   timeleft -= 1;
 }, 1000); // use seconds
+}
+
+
+
+//congratulations modal
+
+function congratulationsRedirect() {
+
+  //congratulations modal duration
+  
+  var congratulations= document.getElementById("congratulations-modal");
+  countdown.classList.add('next-level-open');
+  congratulations.style.display="block";
+  document.getElementById('congratulations-backdrop').style.display ="block";
+  //change the loader wheel into a tick and replace <p> html with "all done! thank you for playing!"
+  var delay2 = 8000; 
+  setTimeout(function(){ 
+    window.location = "https://www.orcaraffle.com"; }, delay2);
 }
