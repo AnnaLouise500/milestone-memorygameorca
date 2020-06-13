@@ -1,5 +1,4 @@
-![Orca Raffle](/assets/img/orcaheader.png)
-Format: ![Alt Text](url)
+![](/assets/img/orcaheader.PNG)
 
 
 # milestone-memorygameorca
