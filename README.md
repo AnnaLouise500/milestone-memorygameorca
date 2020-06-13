@@ -1,4 +1,4 @@
-![](/assets/img/orcaheader.PNG)
+![](/docs/assets/img/orcaheader.PNG)
 
 
 # milestone-memorygameorca
