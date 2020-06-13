@@ -1,3 +1,7 @@
+![Orca Raffle](/assets/img/orcaheader.png)
+Format: ![Alt Text](url)
+
+
 # milestone-memorygameorca
 Memory Game for Orca Raffle - Milestone Project 2 for FSD Course
 
