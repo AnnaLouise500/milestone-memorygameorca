@@ -2,7 +2,6 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   
 }
 /*Homepage*/
 .intro {
@@ -40,6 +39,7 @@ body {
     text-align: center;
     padding-right: 12%;
     padding-left: 12%;
+    margin-bottom: 35px;
 }
 .instructions li {
     padding: 10px;
@@ -48,15 +48,11 @@ body {
     margin-top: 10px;
     font-size: 15px;
 }
-.button-a {
+.lets-do-this-wrapper {
     width: 100%;
     text-align: center;
     margin-top: 10px;
-}
-.button-b {
-    width: 100%;
-    text-align: center;
-    margin-top: 10px;
+    margin-bottom: 20px;
 }
 .lets-do-this {
     width: 200px;
@@ -67,13 +63,39 @@ body {
     font-weight: bolder;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, .26);
     margin-top: 5px;
-}
-.lets-do-this a {
     text-decoration: none;
+    padding: 10px;
     color: #707070;
 }
+
+/*BEGIN/GO/TAKE ME BACK BUTTONS*/
+.dynamic-button {
+    width: 100%;
+    height: 80px;
+    margin-top: 35px;
+    text-align: center;
+    padding: 0;
+}
+.begin-next {
+    width: 200px;
+    height: 46px;
+    border: none;
+    background-color: #DCDFDF;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #707070;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26) ;
+}
+.back-home-wrapper {
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+}
 .back-home {
-    margin-bottom: 20px;
+    border: none;
+    background-color: white;
+    text-decoration: underline;
+    font-size: 10px;
 }
 /*Header & Logo*/
 .header {
@@ -86,7 +108,7 @@ body {
 }
 .orca {
     height: 80px;
-    margin: 0, auto;
+    margin: 0 auto;
 }
 .logo {
     width: 90px;
@@ -100,7 +122,6 @@ body {
 }
 .level-title {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 30;
     text-align: center;
     color: rgb(112,112,112);
 }
@@ -237,34 +258,7 @@ body {
     50% { opacity: 1; }
   }
 
-/*BEGIN/GO/TAKE ME BACK BUTTONS*/
-.dynamic-button {
-    width: 100%;
-    height: 80px;
-    margin-top: 35px;
-    text-align: center;
-    padding: 0;
-}
-.begin-next {
-    width: 200px;
-    height: 46px;
-    border: none;
-    background-color: #DCDFDF;
-    font-size: 20px;
-    font-weight: bolder;
-    color: #707070;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26) ;
-}
-.take-me-back {
-    width: 100%;
-    text-align: center;
-}
-.back-home {
-    border: none;
-    background-color: #ffffff;
-    text-decoration: underline;
-    font-size: 10px;
-}
+
 
 /*Get ready modal*/
   .get-ready-modal {
@@ -436,15 +430,22 @@ body {
     position: relative;
     margin: 0 auto;
    }
-   .next {
+   .next-level-button-wrapper {
     width: 50%;
-    height: 40%;
-    margin-top: 2%;
+    height: 20%;
+    margin-top: 5%;
     border: none;
     background-color: #DCDFDF;
     font-size: 15px;
     font-weight: bolder;
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26) ;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .26);
+    position: relative;
+    top: 20%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    padding-top:10px;
+    padding-bottom: 10px;
    }
    .next-level-button {
        text-decoration: none;

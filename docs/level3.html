@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" http-equiv="ScreenOrientation" content="width=device-width, initial-scale=1.0, autoRotate:disabled">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, autoRotate:disabled">
     <title>Orca Raffle - Memory Game Level 3</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
@@ -14,7 +14,7 @@
         <img src="../assets/img/orcalogo.png" alt="Orca Logo" class="orca">
     </div>
     <div class="lifebar">
-        <input value="3" max="3" id="life-count" class="life-count">
+        <input type="text" value="3" id="life-count" class="life-count">
     </div>
 </div>
 
@@ -81,10 +81,8 @@
 <div class="dynamic-button">
     <button class="begin-next" id="begin">BEGIN</button>
 </div>
-<div class="take-me-back">
-    <button class="back-home">
-        <a href="http://www.orcaraffle.com">I DO NOT WANT TO ENTER THE PRIZE DRAW</a>
-    </button>
+<div class="back-home-wrapper">
+    <a href="http://www.orcaraffle.com" class="back-home">I DO NOT WANT TO ENTER THE PRIZE DRAW</a>
 </div>
 
 <!--Get ready!-->
@@ -92,14 +90,14 @@
     <div id="countdown-modal-div" class="get-ready-modal">
             <h1 class="modal-header">Get ready!</h1>
             <p class="modal-body">Repeat the pattern which was just shown. Your life count is in the top, right-hand corner.</p>
-            <p value="0" max="5" id="countdown-modal" class="countdown-modal"></p>
+            <p id="countdown-modal" class="countdown-modal"></p>
     </div>
 </div>
 
 <!--Game Over-->
 <div id="gameover-backdrop">
     <div class="gameover-modal" id="gameover-modal">
-        <p value="0" max="5" id="gameover" class="gameover"></p>
+        <p id="gameover" class="gameover"></p>
         <h1>Oh no!</h1>
         <p>Unfortunately you haven't passed this time! You will now be redirected to our Homepage.</p>
     </div>
@@ -108,7 +106,7 @@
 <!--Congratulations - Enter Draw-->
 <div id="congratulations-backdrop">
     <div class="congratulations-modal" id="congratulations-modal">
-        <p value="0" max="5" id="enter-draw" class="enter-draw"></p>
+        <p id="enter-draw" class="enter-draw"></p>
         <h1>Congratulations!</h1>
         <p>Your tickets are now being entered into the draw.</p>
         <div class="loader" id="loader"></div> <!--w3schools.com loader wheel-->
@@ -120,12 +118,5 @@
 <!--JS Script/s--> 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="memorygame-level3.js"></script>
-    <script> //stop users using the back/forward button to go to previous/next level
-        $(document).ready(function() {
-            function disableBack() { window.history.forward() }
-            window.onload = disableBack();
-            window.onpageshow = function(evt) { if (evt.persisted) disableBack() }
-        });
-    </script>
 </body>
 </html>
