@@ -1,9 +1,22 @@
+html, body {
+    overflow-x: hidden;
+  }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: relative
 }
+
+
+
+
+/* For everything else */
+
 /*Homepage*/
+.horizontal {
+    display: none;
+}
 .intro {
     margin: 0 auto;
     text-align: center;
@@ -89,7 +102,7 @@ body {
 .back-home-wrapper {
     width: 100%;
     text-align: center;
-    margin-top: 0px;
+    margin-bottom: 20px;
 }
 .back-home {
     border: none;
@@ -552,3 +565,81 @@ body {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  /* For iphone 5*/
+@media screen and (max-width: 350px) {
+    /* Header/ Logo/ Life Counter*/
+    .header {
+        display: inline-block;
+        z-index: 1000;
+        height: 50px;
+    }
+    .orca {
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        margin-top: -2px;
+    }
+    .logo {
+        height: 40px;
+        width: 45px;
+        float: left;
+        margin-left: 25px;
+        margin-top: -5px;
+    }
+    .life-count {
+        width: 30px;
+        height: 30px;
+        margin-top: 70px;
+        z-index: 1;
+        font-size: 20px;
+    }
+
+    /* Level 1 */
+    .memory-game-lg {
+        width: 280px;
+        height: 350px;
+    }
+    .tiles-lg {
+        height: 340px;
+    }
+
+    /* Level 2 */
+    .memory-game-md {
+        width: 280px;
+        height: 350px;
+    }
+    .grid-item-md {
+        height: 60px;
+        width: 60px;
+    }
+    .tiles-md {
+        height: 340px;
+    }
+
+    /* Level 3 */
+    .memory-game-sm {
+        width: 280px;
+        height: 363px;
+    }
+    .grid-item-sm {
+        height: 35px ;
+        width: 35px;
+    }
+
+    /*Next Level Modal/ Level Title/ Begin Button/ Back Home Button*/
+    
+    .next-level {
+        top: 200px;
+       }
+    .level-title {
+        font-size: 10px;
+        margin-top: -5px;
+    }
+    .begin-next {
+        margin-top: -10px;
+    }
+    .back-home-wrapper {
+        margin-top: -30px;
+    }
+}
