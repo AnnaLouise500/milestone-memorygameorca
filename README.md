@@ -22,18 +22,43 @@ chance of winning. They draw the winner by picking a number at random, live on t
 <li>FUTURE - Prompt to show that the game is loading when customer has bad connectivity</li>
 
 ## Mapping
-I spent some time with the client to clearly map out their process flow to guide the user through the game.
-Everything with a thick black border already exists, the game will plug into these points.
-![](/assets/img/orcaflow.PNG)
+I spent some time with the client to clearly map out their process flow to guide the user through the game.<br>
+Everything with a thick black border already exists, the game will plug into these points.<br>
+![](/assets/img/orcaflow.PNG)<br>
 
 # UX
 
 ## Ideal Client
+Orca Raffle is designed to appeal to many demographics so our ideal client will be between the ages of 18 to 60. <br>
+They don't need to be technically savvy to use this site or game. <br>
+As this service is currently only available in the UK the will need to based in country.<br>
+The users will also need to have disposable income. <br>
+English speaking as this site and game instructions are only available in English. <br>
 
-### Profile
 ### What's the user/client goal?
+This game has been designed to ensure only 85% of people using Orca Raffle have their tickets entered into the live draw. This is to both increase revenue for the client and
+to ensure that the service is not classed as gambling. The game needs to be skill based so the user cannot find the answer by other means to pass when they shouldn't.<br>
+<br>
+The user goal is to pass all 3 levels of this skill based game to get their tickets entered into the live draw and be in with a chance of winning the prize!<br>
+
 ### How does this project best help them achieve this goal?
+The game has been designed to be challenging, engaging and most of all - fun! This is to ensure that the user enjoys their complete experience when using Orca Raffle.
+The UX has been designed to be user friendly and scales to all screen sizes so no one is left out.<br>
+
+<b>It has however been optimised for portrait viewing on larger screens.<b>
+  
 ### Client Stories
+1) As a client, I want my branding to be visible in all possible scenarios.<br>
+2) As a client, I want the experience to be fluid to retain all clients.<br>
+3) As a client, I want to make the game skill based to eradicate the possibility of users cheating to pass.<br>
+4) As a client, I want a clean, efficient process which is clearly explained to my users.<br>
+5) As a client, I want a reliable service which doesn't break.<br>
+6) As a user of this site, it needs to be readable, intuitive and easy to use.<br>
+7) As a user, I want to be able to view each level without difficulty.<br>
+8) As a user, I want clear instructions on how to play the game before it starts.<br>
+9) As a user, I want the choice to be able to return to the homescreen at any point.<br>
+10) As a user, I want to see my life count at all times to see how close I am to passing/failing.<br>
+
 ### Wireframe mockups
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 
