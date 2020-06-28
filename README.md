@@ -1,17 +1,9 @@
 ![](/assets/img/orcaheader.PNG)
-
-
-# milestone-memorygameorca
-Memory Game for Orca Raffle - Milestone Project 2 for FSD Course
+# Memory Game - Orca Raffle
 
 ## Who are Orca Raffle?
-<ul>
-<li>Orca Raffle is the brain child of James and Piers, childhood school friends who wanted to create a platform which contributes to generating revenue for a number of different charities</li>
-<li>The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
-chance of winning.</li>
-<li>They draw the winner by picking a number at random, live on their website.</li> 
-<li>To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets</li>
-<li>If the customer does not pass the game, they will not be entered into the prize draw</li>
+Orca Raffle is the brain child of James and Piers, childhood school friends who wanted to create a platform which contributes to generating revenue for a number of different charities. The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
+chance of winning. They draw the winner by picking a number at random, live on their website. To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets. If the customer does not pass the game, they will not be entered into the prize draw.
 
 ## Requirements
 <li><b>PRIORITY</b> - The pass rate of this game needs to be less than 85%</li>
@@ -29,9 +21,15 @@ chance of winning.</li>
 <li>FUTURE - The owners need to be able to capture the number of poeple clicking "Begin" vs the number of people clicking "Enter Into Draw" to ensure the 85% pass rate is adhered to as they can be audited</li>
 <li>FUTURE - Prompt to show that the game is loading when customer has bad connectivity</li>
 
+## Mapping
+I spent some time with the client to clearly map out their process flow to guide the user through the game.
+Everything with a thick black border already exists, the game will plug into these points.
+![](/assets/img/orcaflow.PNG)
+
 # UX
 
 ## Ideal Client
+
 ### Profile
 ### What's the user/client goal?
 ### How does this project best help them achieve this goal?
@@ -103,12 +101,14 @@ It was then deployed to GitHub Pages from the GitHub repository using the follow
 
 # Running the project locally
 
-To make a local copy of this repository from GitHub:
-<ol>
-  <li><a href="https://github.com/AnnaLouise500/milestone-memorygameorca">Access the GitHub repository</a></li>
-  <li>Under the repository name, click "clone or download"</li>
-  <li>Click Download Zip - This will create a local copy of all the repo files</li>
-  <li>In your Downloads folder, right click on the file with the zipped icon</li>
-  <li>Choose extract all and pick the location you want the local files to be located</li>
-  <li>You can now open this folder using VS Code by clicking File > Open Folder</li>
-</ol>
+## To make a local copy of this repository from GitHub:
+<a href="https://github.com/AnnaLouise500/milestone-memorygameorca">Access the GitHub repository</a><br>
+Under the repository name, click "clone or download"<br>
+![](/assets/img/clonedownload.PNG)<br>
+Click Download Zip - This will create a local copy of all the repo files.<br>
+![](/assets/img/downloadzip.PNG)<br>
+In your Downloads folder, right click on the file with the zipped icon.<br>
+![](/assets/img/downloadunzip.PNG)<br>
+Choose extract all and pick the location you want the local files to be located<br>
+You can now open this folder using VS Code by clicking File > Open Folder<br>
+
