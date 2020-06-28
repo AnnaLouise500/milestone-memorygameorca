@@ -31,6 +31,7 @@ chance of winning.</li>
 
 ## Mapping
 I spent some time with the client to clearly map out their process flow to guide the user through the game.
+Everything with a thick black border already exists, the game will plug into these points.
 ![](/assets/img/orcaflow.PNG)
 
 # UX
@@ -111,7 +112,7 @@ It was then deployed to GitHub Pages from the GitHub repository using the follow
 To make a local copy of this repository from GitHub:
 <ol>
   <li><a href="https://github.com/AnnaLouise500/milestone-memorygameorca">Access the GitHub repository</a></li>
-  <li>Under the repository name, click "clone or download"</li>
+  <li>Under the repository name, click "clone or download"</li> ![](/assets/img/clonedownload.PNG)
   <li>Click Download Zip - This will create a local copy of all the repo files</li>
   <li>In your Downloads folder, right click on the file with the zipped icon</li>
   <li>Choose extract all and pick the location you want the local files to be located</li>
