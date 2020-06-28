@@ -38,7 +38,7 @@ function showCorrect(el) {
 function countdownModalStart() {
 
     // countdown modal duration
-    
+
     let modal = document.getElementById('countdown-modal-div'); // get the countdown modal
     countdown.classList.add('countdown-modal-open'); // add countdown-modal-open as a class to fade in
     modal.style.display = 'block'; // change the display of the modal to block from none

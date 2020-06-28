@@ -14,155 +14,163 @@ var correctTiles = $('.grid-item-sm.correct');
 var incorrectTiles = $('.grid-item-sm.incorrect');
 
 //countdown variable
-var countdown = document.getElementById("countdown-backdrop");
+var countdown = document.getElementById('countdown-backdrop');
 
 
+// function to display combination
+/* After the begin button has been clicked, show the correct combination by lighting up the correct tiles. After these have faded, start the countdown modal.  */
 
-//function to display combination
 function showCorrect(el) {
-    Array.from(correctTiles).forEach(function(el) {
-        el.classList.add("active"); //add "ative" animation class
-        setTimeout(function(){
-            el.classList.remove('active'); //remove "active" animation class
-            begin.removeEventListener('click', showCorrect); //remove begin button event listener
-            countdownModalStart()
-        },2000); //2 seconds after the class is added
-    
-      })
+    Array.from(correctTiles).forEach(function(el) { // using the array from correctTiles - for each element...
+        el.classList.add('active'); // add "active" animation class
+        setTimeout(function() { // after adding the "active" class, remove after 2 seconds (line 30)
+            el.classList.remove('active'); // remove "active" animation class
+            begin.removeEventListener('click', showCorrect); // remove begin button event listener so user cannot repeat pattern show
+            countdownModalStart() // begin the countdown modal before user repeats pattern
+        }, 2000);
+
+    })
 }
 
-//countdown modal start
+// countdown modal start
+/* After the correct combination has been displayed, show the countdown modal. This gives the user 3 seconds to get ready before repeating the pattern. */
+
 function countdownModalStart() {
 
-//countdown modal duration
+    // countdown modal duration
 
-var modal = document.getElementById("countdown-modal-div");
-countdown.classList.add('countdown-modal-open');
-modal.style.display="block";
-document.getElementById('countdown-backdrop').style.display ="block";
+    let modal = document.getElementById('countdown-modal-div'); // get the countdown modal
+    countdown.classList.add('countdown-modal-open'); // add countdown-modal-open as a class to fade in
+    modal.style.display = 'block'; // change the display of the modal to block from none
+    document.getElementById('countdown-backdrop').style.display = 'block'; // get the countdown modal backdrop and change display to block from none
 
-var timeleft = 3;
-var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){ //when the timer hits 0
-    clearInterval(downloadTimer);
-    document.getElementById("countdown-modal").innerHTML = "0"; //show 0s seconds remaining
-      setTimeout(function(){
-        document.getElementById('countdown-backdrop').style.display = "none"; //hide content
-      },900);
-    closeModal(); //call modal close function
-  } else {
-    document.getElementById("countdown-modal").innerHTML = timeleft; //show time remaining
-  }
-  timeleft -= 1;
-}, 1000); // use seconds
+    let timeleft = 3; // 3 seconds on the timer
+    let downloadTimer = setInterval(function() {
+        if (timeleft <= 0) { // when the timer hits 0 seconds
+            clearInterval(downloadTimer);
+            document.getElementById('countdown-modal').innerHTML = '0'; // show 0s seconds remaining on the modal
+            setTimeout(function() {
+                document.getElementById('countdown-backdrop').style.display = 'none'; // then hide content
+            }, 900); // .9 seconds
+            closeModal(); // call modal close function
+        } else {
+            document.getElementById('countdown-modal').innerHTML = timeleft; //show time remaining
+        }
+        timeleft -= 1; // take 1 second off the timer each second (line 60)
+    }, 1000); // use seconds
 }
 
 //countdown modal close function
-function closeModal(){
-    countdown.classList.remove('countdown-modal-open'); //remove open class from countdown-backdrop
-    countdown.classList.add('countdown-modal-close'); //add close class to countdown-backdrop
-    document.getElementById("begin").innerHTML = "GO!";
-    
-    listenForClickTiles();
+/* after the countdown modal has reached 0 seconds, close modal and change the BEGIN button to show GO!*/
+
+function closeModal() {
+    countdown.classList.remove('countdown-modal-open'); // remove open class from countdown-backdrop
+    countdown.classList.add('countdown-modal-close'); // add close class to countdown-backdrop
+    document.getElementById('begin').innerHTML = 'GO!'; // change the begin button to show go!
+    listenForClickTiles(); // start listening for clicks on the tiles to see if they're correct or not
 }
 
 //register tile click (add event listener to all grid-item-lg)
+/* after the modal has closed, start listening for clicks on each tile to see if they're correct or not*/
+
 function listenForClickTiles() {
-  Array.from(allTiles).forEach(function(element){
-  element.addEventListener('click', addClick); //if any tile is clicked run addClick function
-})
+    Array.from(allTiles).forEach(function(element) { // use the allTiles array to add an event listener to each element within the array
+        element.addEventListener('click', addClick); //if any tile is clicked run addClick function
+    })
 }
 
 //tile has been clicked
-function addClick(){
-    $(this).addClass('clicked');
-    if($(this).hasClass('correct')){
-      tileClickColorChangeCorrect();
-    }
-    else {
-    tileClickColorChangeIncorrect();
-    }
-  }
+/* addClick filters out whether the tile clicked is correct or not, calling the relevant function to each eventuality. */
 
-//background colour change on correct tiles
-function tileClickColorChangeCorrect() {
-    correctTiles.each(function(){
-      if ($(this).hasClass('correct clicked')){
-          $(this).addClass('correct-color');
-          console.log("correct color class added");
-          $(this).removeClass('clicked');
-          $(this).addClass('life-not-lost')
-      }
-      if (!$(".correct").not(".life-not-lost").length){
-        congratulationsRedirect();
-      }
-  })
+function addClick() {
+    $(this).addClass('clicked'); // add clicked to the tile so we can decipher which tiles have been clicked and which haven't
+    if ($(this).hasClass('correct')) { // if the tile has a class 'correct' then call tileClickColorChangeCorrect
+        tileClickColorChangeCorrect();
+    } else {
+        tileClickColorChangeIncorrect(); // otherwise call tileClickColorChangeIncorrect
+    }
 }
 
 //background colour change on correct tiles
+/* When the tile clicked is correct it should have 'correct clicked' as classes. If so then 'correct-color' class should be added and no life lost. When all correct tiles have been clicked, show next level modal */
+function tileClickColorChangeCorrect() {
+    correctTiles.each(function() { // for each correctTiles element clicked
+        if ($(this).hasClass('correct clicked')) { // check if the tile has the required classes ('correct clicked')
+            $(this).addClass('correct-color'); // if the tile does have the classes add 'correct-color' class
+            $(this).removeClass('clicked'); // then remove the 'clicked' class to stop duplicates
+            $(this).addClass('life-not-lost') // add 'life-not-lost' to create a tally to establish if all correct tiles have been clicked
+        }
+        if (!$(".correct").not(".life-not-lost").length) { // if the amount of elements containing 'life-not-lost' is equal to the amount of elements in correctTiles
+            congratulationsRedirect(); // load the congratulations modal as the user has completed the game
+        }
+    })
+}
+
+//background colour change on incorrect tiles
+/* When the tile is clicked it should have 'incorrect clicked' as classes. If so then add 'incorrect-color' class. Then lose a life and update the life counter in the top right hand corner of the screen. */
 
 function tileClickColorChangeIncorrect() {
-  incorrectTiles.each(function(){
-    var lifeCount = document.getElementById('life-count').value;{
-      if ($(this).hasClass('incorrect clicked')){
-        $(this).addClass('incorrect-color');
-        lifeCount--; //decrease life-count value by 1
-        document.getElementById('life-count').value = lifeCount; //return the new value
-        $(this).removeClass('clicked');
-        $(this).addClass('life-lost');
-        lifeCounter();
-      } 
-    }
-  })
+    incorrectTiles.each(function() { // for each incorrectTiles element clicked
+        let lifeCount = document.getElementById('life-count').value; { // get the value from the input element which represents the life counter
+            if ($(this).hasClass('incorrect clicked')) { // check the tile has the required classes 'incorrect clicked'
+                $(this).addClass('incorrect-color'); // if the tile does have the classes add 'incorrect-color' class
+                lifeCount--; // then decrease life-count value by 1
+                document.getElementById('life-count').value = lifeCount; // show the new value in the life counter HTML element
+                $(this).removeClass('clicked'); // remove the 'clicked class to stop duplicates
+                $(this).addClass('life-lost'); // add 'life-lost' to create a tally to help establish if all lives have been lost
+                lifeCounter(); // check the life counter to see if all lives have been lost
+            }
+        }
+    })
 }
 
 //life counter
+/* Checking the number of lives in the HTML input element */
 
 function lifeCounter() {
-  var lifeCount = document.getElementById('life-count').value;
-    if(lifeCount == 0){
-     gameoverModalStart(); //tested by calling in closeModal function - this function works
+    let lifeCount = document.getElementById('life-count').value; // check the value in the life count HTML input element
+    if (lifeCount == 0) { // if it's equal to 0
+        gameoverModalStart(); // then launch the game over modal
     }
-  }
+}
 
 //game over modal start
+/* If the number of lives was 0 then the game over modal should show up and after 5 seconds, redirect the user to the Orca Raffle Homepage */
 
 function gameoverModalStart() {
 
-//gameover modal duration 
+    //gameover modal duration 
 
-var gameoverModal = document.getElementById("gameover-modal");
-gameoverModal.classList.add('gameover-modal-open');
-gameoverModal.style.display="block";
-document.getElementById('gameover-backdrop').style.display ="block";
+    let gameoverModal = document.getElementById('gameover-modal'); // get the gameover modal
+    gameoverModal.classList.add('gameover-modal-open'); // add the 'gameover-modal-open' class
+    gameoverModal.style.display = 'block'; // change the modal display to block from none
+    document.getElementById('gameover-backdrop').style.display = 'block'; // change the modal backdrop display from none to block
 
-var timeleft = 5;
-  var downloadTimer = setInterval(function(){
-  if(timeleft <= 0){ //when the timer hits 0
-    clearInterval(downloadTimer);
-    document.getElementById("gameover").innerHTML = "0s"; //show 0s seconds remaining
-    window.location.replace("https://www.orcaraffle.com"); //redirect to url (replace means they cant hit back)
-  } else {
-    document.getElementById("gameover").innerHTML = timeleft + "s"; //show time remaining
-  }
-  timeleft -= 1;
-}, 1000); // use seconds
+    let timeleft = 5; // the countdown timer has 5 seconds before redirecting
+    let downloadTimer = setInterval(function() {
+        if (timeleft <= 0) { // when the timer hits 0
+            clearInterval(downloadTimer);
+            document.getElementById('gameover').innerHTML = '0s'; // show 0s seconds remaining in the modal
+            window.location.replace('https://www.orcaraffle.com'); // redirect to url (replace means they cant hit back and return to the level they were on)
+        } else {
+            document.getElementById('gameover').innerHTML = timeleft + 's'; // show time remaining
+        }
+        timeleft -= 1; // take 1 off timeLeft every second (line 160) 
+    }, 1000); // 1 second
 }
-
-
 
 //congratulations modal
 
 function congratulationsRedirect() {
 
-  //congratulations modal duration
-  
-  var congratulations= document.getElementById("congratulations-modal");
-  countdown.classList.add('next-level-open');
-  congratulations.style.display="block";
-  document.getElementById('congratulations-backdrop').style.display ="block";
-  //change the loader wheel into a tick and replace <p> html with "all done! thank you for playing!"
-  var delay2 = 8000; 
-  setTimeout(function(){ 
-    window.location = "https://www.orcaraffle.com"; }, delay2);
+    //congratulations modal duration
+
+    let congratulations = document.getElementById('congratulations-modal'); // get the congratulations modal
+    countdown.classList.add('next-level-open'); // add the class of next-level-open to transition into view
+    congratulations.style.display = "block"; // change the display from none to block
+    document.getElementById('congratulations-backdrop').style.display = 'block'; // change the backdrop for modal from none to block
+    let delay2 = 8000; // delay for page redirect
+    setTimeout(function() {
+        window.location = 'https://www.orcaraffle.com';
+    }, delay2); // take the user to the homepage after 8 seconds (line 172)
 }
