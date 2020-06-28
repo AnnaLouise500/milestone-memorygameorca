@@ -1,17 +1,9 @@
 ![](/assets/img/orcaheader.PNG)
-
-
-# milestone-memorygameorca
-Memory Game for Orca Raffle - Milestone Project 2 for FSD Course
+# Memory Game - Orca Raffle
 
 ## Who are Orca Raffle?
-<ul>
-<li>Orca Raffle is the brain child of James and Piers, childhood school friends who wanted to create a platform which contributes to generating revenue for a number of different charities</li>
-<li>The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
-chance of winning.</li>
-<li>They draw the winner by picking a number at random, live on their website.</li> 
-<li>To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets</li>
-<li>If the customer does not pass the game, they will not be entered into the prize draw</li>
+Orca Raffle is the brain child of James and Piers, childhood school friends who wanted to create a platform which contributes to generating revenue for a number of different charities. The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
+chance of winning. They draw the winner by picking a number at random, live on their website. To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets. If the customer does not pass the game, they will not be entered into the prize draw.
 
 ## Requirements
 <li><b>PRIORITY</b> - The pass rate of this game needs to be less than 85%</li>
