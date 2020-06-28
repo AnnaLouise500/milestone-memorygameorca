@@ -63,11 +63,9 @@ The UX has been designed to be user friendly and scales to all screen sizes so n
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 
 # Features
+![](/assets/img/game.PNG)
 
-### Homepage (index.html)
-### Level 1 (level1.html)
-### Level 2 (level2.html)
-### Level 3 (level3.html)
+
 
 ## Existing Features
 <ul>
