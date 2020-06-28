@@ -29,9 +29,14 @@ chance of winning.</li>
 <li>FUTURE - The owners need to be able to capture the number of poeple clicking "Begin" vs the number of people clicking "Enter Into Draw" to ensure the 85% pass rate is adhered to as they can be audited</li>
 <li>FUTURE - Prompt to show that the game is loading when customer has bad connectivity</li>
 
+## Mapping
+I spent some time with the client to clearly map out their process flow to guide the user through the game.
+![](/assets/img/orcaflow.PNG)
+
 # UX
 
 ## Ideal Client
+
 ### Profile
 ### What's the user/client goal?
 ### How does this project best help them achieve this goal?
