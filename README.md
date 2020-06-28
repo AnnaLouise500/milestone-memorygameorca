@@ -52,9 +52,33 @@ https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 </ul>
 
 ## Features for future
-<ul>
-  <li>List all functionality which was out of current scope and planned for future</li>
-</ul>
+### Randomized Tile Combinations
+Currently users will only encounter the same combination when accessing each level (example; Level 1's tiles will always show the same combination). 
+Moving forward I would like to create a randomized pattern by making my JS level sensitive (unfortunately I ran out of time to demonstrate this in this project).
+#### Thought Process
+I would implement a "Load Level" step in my JS to specify which actions are to be completed within that level.
+I would then generate an array of random true or false arguments which would be used to randomize the pattern within that level.
+I would then need to research how to use my new array/s to target the tiles using DOM manipulation to make them show in a random order.
+I believe each tile would need to have it's own specific class to 
+
+### Entry vs Completion Counter
+Currently there is no way of knowing how many people have clicked "Begin" on Level 1 compared to how many people have been entered into the raffle after completing level 3.
+#### Thought Process
+I would need to put a counter on the "Begin" button on level 1 which is stored in an "Admin" type dashboard.
+I would need to create a login page for the Orca Raffle owners so they could log in and see the count.
+The owners would also use this login page to view the sheet which contains all users who have been successfully entered into the raffle.
+
+### Removing the browser refresh functionality
+Currently because the tile combinations are not random the user can view the combination and then click refresh (or use F5) to restart the combination display process.
+#### Thought Process
+The refresh functionality could be made redundant by using randomized tile combinations due to the difficulty in removing the refresh ability.
+
+### Combining all JS files
+Currently each level has it's own JS file. This is due to the different class names needed for the different tile sizes as you progress through the levels. 
+For example; Level 1 has the largest tiles and is styled using the "grid-item-lg" class. This class is used to gather the var allTiles in memorygame-leve1.js.
+#### Thought Process
+Again, going back to the randomized tile combinations future development - we will need to target the tiles using DOM manipulation, rather than class names.
+This would remove the need for seperate JS files.
 
 # Technologies Used
 <ul>
