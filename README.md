@@ -121,17 +121,19 @@ This would remove the need for seperate JS files.
 testing.md file to be created once project complete
 
 # Deployment
-This project was developed using MS Visual Studio Code and committed to my GitHub repository using GitHub Desktop.
+### This project was developed using MS Visual Studio Code and committed to my GitHub repository using GitHub Desktop.
+### It was then deployed to GitHub Pages from the GitHub repository using the following steps:
+#### All up to date files were commited to the repository using GitHub Desktop.<br>
+#### Go into the GitHub repo which you would like to deploy.<br>
+#### Click Settings icon at the top<br>
+![](/assets/img/settings.PNG)<br>
+#### Scroll down to the GitHub Pages section.<br>
+![](/assets/img/githubpages.PNG)<br>
+#### Under "Source" click the drop-down menu labelled None and select " master branch /docs folder<br>
+![](/assets/img/masterbranch.PNG)<br>
+#### The page will refresh, scroll back down to GitHub Pages. The link to your deployment is at the top.<br>
+![](/assets/img/published.PNG)<br>
 
-It was then deployed to GitHub Pages from the GitHub repository using the following steps:
-<ol>
-  <li>All up to date files were commited to the repository using GitHub Desktop</li>
-  <li>Go into the GitHub repo which you would like to deploy</li>
-  <li>Click Settings icon at the top</li>
-  <li>Scroll down to the GitHub Pages section</li>
-  <li>Under "Source" click the drop-down menu labelled None and select " master branch /docs folder</li>
-  <li>The page will refresh</li>
-</ol>
 
 # Running the project locally
 
