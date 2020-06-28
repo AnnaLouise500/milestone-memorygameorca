@@ -45,7 +45,7 @@ The user goal is to pass all 3 levels of this skill based game to get their tick
 The game has been designed to be challenging, engaging and most of all - fun! This is to ensure that the user enjoys their complete experience when using Orca Raffle.
 The UX has been designed to be user friendly and scales to all screen sizes so no one is left out.<br>
 
-<b>It has however been optimised for portrait viewing on larger screens.<b>
+<b>It has however been optimised for portrait viewing on larger screens.</b>
   
 ### Client Stories
 1) As a client, I want my branding to be visible in all possible scenarios.<br>
