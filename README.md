@@ -63,14 +63,22 @@ The UX has been designed to be user friendly and scales to all screen sizes so n
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 
 # Features
-![](/assets/img/game.PNG)
-
-
+![](/assets/img/game.png)
 
 ## Existing Features
-<ul>
-  <li>List all functionality within the project at submission</li>
-</ul>
+#### 1) Index - Instructions on how to play the game.<br>
+#### 2) Index - Let's do this button takes the user to Level 1.<br>
+#### 3) Index & Level 1/2/3 - I do not want to enter the prize draw takes the user to the Orca Raffle Homepage.<br>
+#### 4) Level 1/2/3 - Begin button starts the display of the correct tiles.<br>
+#### 5) Level 1/2/3 - After correct tile display, the countdown modal appears.<br>
+![](/assets/img/getreadymodal.png)<br>
+#### 6) Level 1 & 2 - After count down finishes, the user enters the correct combination and sees next level modal.<br>
+![](/assets/img/pass.png)<br>
+#### 7) Level 3 - After count down finishes, the user enters the correct combination and sees the congratulations modal.<br>
+![](/assets/img/congrats.png)<br>
+#### 8) Level 1/2/3 - After count down finishes, the user enters the incorrect combination 3 times and sees game over modal.<br>
+![](/assets/img/ohno.png)<br>
+
 
 ## Features for future
 ### Randomized Tile Combinations
