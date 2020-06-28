@@ -101,8 +101,8 @@ It was then deployed to GitHub Pages from the GitHub repository using the follow
 
 # Running the project locally
 
-## 1) To make a local copy of this repository from GitHub:
-### <a href="https://github.com/AnnaLouise500/milestone-memorygameorca">Access the GitHub repository</a><br>
+## To make a local copy of this repository from GitHub:
+### 1) Access the GitHub repository <a href="https://github.com/AnnaLouise500/milestone-memorygameorca">here</a><br>
 ![](/assets/img/repo.PNG)<br>
 ### 2) Under the repository name, click "clone or download"<br>
 ![](/assets/img/clonedownload.PNG)<br>
