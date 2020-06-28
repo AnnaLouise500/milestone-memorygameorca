@@ -105,7 +105,16 @@ This would remove the need for seperate JS files.
 
 # Technologies Used
 <ul>
-  <li>List all technology and languages used in this project</li>
+  <li>HTML and CSS</li>
+  <li>jQuery</li>
+  <li>JavaScript</li>
+  <li>VS Code - Source code editor (IDE)</li>
+  <li>GitHub Desktop - To review and push all commits to github.com</li>
+  <li>W3Schools - The loader wheel on the congratulations modal on completion of Level 3</li>
+  <li>https://validator.w3.org/ - For HTML validation</li>
+  <li>https://jigsaw.w3.org/css-validator/ - For CSS validation</li>
+  <li>https://beautifier.io/ - For JS beautifier</li>
+  <li>GitHub Pages - To display the completed project</li>
 </ul>
 
 # Testing
