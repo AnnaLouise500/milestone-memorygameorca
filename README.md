@@ -103,6 +103,7 @@ It was then deployed to GitHub Pages from the GitHub repository using the follow
 
 ## To make a local copy of this repository from GitHub:
 <a href="https://github.com/AnnaLouise500/milestone-memorygameorca">Access the GitHub repository</a><br>
+![](/assets/img/repo.PNG)<br>
 Under the repository name, click "clone or download"<br>
 ![](/assets/img/clonedownload.PNG)<br>
 Click Download Zip - This will create a local copy of all the repo files.<br>
@@ -110,5 +111,7 @@ Click Download Zip - This will create a local copy of all the repo files.<br>
 In your Downloads folder, right click on the file with the zipped icon.<br>
 ![](/assets/img/downloadunzip.PNG)<br>
 Choose extract all and pick the location you want the local files to be located<br>
+![](/assets/img/extractto.PNG)<br>
 You can now open this folder using VS Code by clicking File > Open Folder<br>
+![](/assets/img/openfolder2.PNG)<br>
 
