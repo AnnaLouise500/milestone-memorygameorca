@@ -87,15 +87,15 @@ function addClick(){
 //background colour change on correct tiles
 function tileClickColorChangeCorrect() {
     correctTiles.each(function(){
-   if ($(this).hasClass('correct clicked')){
-      $(this).addClass('correct-color');
-      console.log("correct color class added");
-      $(this).removeClass('clicked');
-      $(this).addClass('life-not-lost')
-   }
-   if (!$(".correct").not(".life-not-lost").length){
-     congratulationsRedirect();
-   }
+      if ($(this).hasClass('correct clicked')){
+          $(this).addClass('correct-color');
+          console.log("correct color class added");
+          $(this).removeClass('clicked');
+          $(this).addClass('life-not-lost')
+      }
+      if (!$(".correct").not(".life-not-lost").length){
+        congratulationsRedirect();
+      }
   })
 }
 
@@ -104,14 +104,14 @@ function tileClickColorChangeCorrect() {
 function tileClickColorChangeIncorrect() {
   incorrectTiles.each(function(){
     var lifeCount = document.getElementById('life-count').value;{
-    if ($(this).hasClass('incorrect clicked')){
-      $(this).addClass('incorrect-color');
-      lifeCount--; //decrease life-count value by 1
-      document.getElementById('life-count').value = lifeCount; //return the new value
-      $(this).removeClass('clicked');
-      $(this).addClass('life-lost');
-      lifeCounter();
-    } 
+      if ($(this).hasClass('incorrect clicked')){
+        $(this).addClass('incorrect-color');
+        lifeCount--; //decrease life-count value by 1
+        document.getElementById('life-count').value = lifeCount; //return the new value
+        $(this).removeClass('clicked');
+        $(this).addClass('life-lost');
+        lifeCounter();
+      } 
     }
   })
 }
