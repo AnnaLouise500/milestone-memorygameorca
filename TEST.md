@@ -81,34 +81,48 @@ The life count background is a lot darker than the header to ensure it stands ou
 ![](/assets/img/linebreak.png)
 ## Functionality Testing
 1) Viewport Scaling
+- All working and tested <br>
 
 2) Horizontal Viewing
+- Horizontal viewing is possible on tablets and above but on mobiles needs to be disabled as half of the grid isn't on the screen.<br>
 
 3) Return to Orca Raffle Homepage Links
+- All working and tested <br>
 
 4) Let's Do This Button
+- All working and tested <br>
 
 5) Begin Button Trigger
+- All working and tested <br>
 
 6) Internal HTML change on Begin Button
+- All working and tested <br>
 
 7) Tiles
+- All working and tested <br>
 
 8) Countdown modal
+- All working and tested <br>
 
 9) Life Counter
+- All working and tested <br>
 
 10) Gameover Modal
+- All working and tested <br>
 
 11) Congratulations Modal
+- All working and tested <br>
 
 12) Next Level Modal
+- All working and tested <br>
 
 ![](/assets/img/linebreak.png)
 ## User Testing
 The memory game was passed to a few family members and friends to have a play around with. I picked a group who had varying screen sizes and technical abilities.<br>
-The main 2 points that came from the group are listed below:<br>
-<br>
+The main 2 points to target moving forwards which came from the group are listed below:<br>
+
 1) Smaller Screens
+The game does become harder to play on smaller screens, maybe change the grid size to be the same size, with larger tiles but a more complicated combination?
 
 2) Horizontal Viewing
+On a mobile phone, you can only see half the grid at any time. Is there a way to disable horizontal viewing?
