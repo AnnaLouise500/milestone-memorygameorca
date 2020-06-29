@@ -37,7 +37,7 @@ Everything with a thick black border already exists, the game will plug into the
 
 # UX
 
-![](/assets/img/linebreak.png)
+
 
 ## Ideal Client
 Orca Raffle is designed to appeal to many demographics so our ideal client will be between the ages of 18 to 60. <br>
