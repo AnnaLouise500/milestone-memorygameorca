@@ -162,7 +162,7 @@ This would remove the need for seperate JS files.
 ![](/assets/img/linebreak.png)
 
 # Testing
-testing.md file to be created once project complete
+Testing Document <a href="https://github.com/AnnaLouise500/milestone-memorygameorca/blob/master/TEST.md">here</a>
 
 ![](/assets/img/linebreak.png)
 
