@@ -21,7 +21,7 @@ let countdown = document.getElementById('countdown-backdrop');
 /* After the begin button has been clicked, show the correct combination by lighting up the correct tiles. After these have faded, start the countdown modal.  */
 
 function showCorrect(el) {
-    Array.from(correctTiles).forEach(function(el) { // using the array from correctTiles - for each element...
+    Array.from(correctTiles).forEach(function(el) { // using the array from correctTiles - for each HTML element...
         el.classList.add('active'); // add "active" animation class
         setTimeout(function() { // after adding the "active" class, remove after 2 seconds (line 30)
             el.classList.remove('active'); // remove "active" animation class
@@ -92,7 +92,8 @@ function addClick() {
 }
 
 //background colour change on correct tiles
-/* When the tile clicked is correct it should have 'correct clicked' as classes. If so then 'correct-color' class should be added and no life lost. When all correct tiles have been clicked, show next level modal */
+/* When the tile clicked is correct it should have 'correct clicked' as classes. 
+If so then 'correct-color' class should be added and no life lost. When all correct tiles have been clicked, show next level modal */
 
 function tileClickColorChangeCorrect() {
     correctTiles.each(function() { // for each correctTiles element clicked
@@ -108,7 +109,8 @@ function tileClickColorChangeCorrect() {
 }
 
 //background colour change on incorrect tiles
-/* When the tile is clicked it should have 'incorrect clicked' as classes. If so then add 'incorrect-color' class. Then lose a life and update the life counter in the top right hand corner of the screen. */
+/* When the tile is clicked it should have 'incorrect clicked' as classes. If so then add 'incorrect-color' class. 
+Then lose a life and update the life counter in the top right hand corner of the screen. */
 
 function tileClickColorChangeIncorrect() {
     incorrectTiles.each(function() { // for each incorrectTiles element clicked
@@ -136,7 +138,8 @@ function lifeCounter() {
 }
 
 //game over modal start
-/* If the number of lives was 0 then the game over modal should show up and after 5 seconds, redirect the user to the Orca Raffle Homepage */
+/* If the number of lives was 0 then the game over modal should show up 
+and after 5 seconds, redirect the user to the Orca Raffle Homepage */
 
 function gameoverModalStart() {
 
