@@ -1,9 +1,14 @@
 ![](/assets/img/orcaheader.PNG)
+
 # Memory Game - Orca Raffle
+
+![](/assets/img/linebreak.png)
 
 ## Who are Orca Raffle?
 Orca Raffle is the brain child of James and Piers, childhood school friends who wanted to create a platform which contributes to generating revenue for a number of different charities. The site works by procuring donated prizes such as iPhones, Xbox consoles etc and allowing their customers to buy tickets in the 
 chance of winning. They draw the winner by picking a number at random, live on their website. To limit the amount of people entering the raffle they have come up with the idea of creating a game which will load just after a customer has paid for their tickets. If the customer does not pass the game, they will not be entered into the prize draw.
+
+![](/assets/img/linebreak.png)
 
 ## Requirements
 <li><b>PRIORITY</b> - The pass rate of this game needs to be less than 85%</li>
@@ -21,12 +26,18 @@ chance of winning. They draw the winner by picking a number at random, live on t
 <li>FUTURE - The owners need to be able to capture the number of poeple clicking "Begin" vs the number of people clicking "Enter Into Draw" to ensure the 85% pass rate is adhered to as they can be audited</li>
 <li>FUTURE - Prompt to show that the game is loading when customer has bad connectivity</li>
 
+![](/assets/img/linebreak.png)
+
 ## Mapping
 I spent some time with the client to clearly map out their process flow to guide the user through the game.<br>
 Everything with a thick black border already exists, the game will plug into these points.<br>
 ![](/assets/img/orcaflow.PNG)<br>
 
+![](/assets/img/linebreak.png)
+
 # UX
+
+![](/assets/img/linebreak.png)
 
 ## Ideal Client
 Orca Raffle is designed to appeal to many demographics so our ideal client will be between the ages of 18 to 60. <br>
@@ -35,18 +46,24 @@ As this service is currently only available in the UK the will need to based in 
 The users will also need to have disposable income. <br>
 English speaking as this site and game instructions are only available in English. <br>
 
+![](/assets/img/linebreak.png)
+
 ### What's the user/client goal?
 This game has been designed to ensure only 85% of people using Orca Raffle have their tickets entered into the live draw. This is to both increase revenue for the client and
 to ensure that the service is not classed as gambling. The game needs to be skill based so the user cannot find the answer by other means to pass when they shouldn't.<br>
 <br>
 The user goal is to pass all 3 levels of this skill based game to get their tickets entered into the live draw and be in with a chance of winning the prize!<br>
 
+![](/assets/img/linebreak.png)
+
 ### How does this project best help them achieve this goal?
 The game has been designed to be challenging, engaging and most of all - fun! This is to ensure that the user enjoys their complete experience when using Orca Raffle.
 The UX has been designed to be user friendly and scales to all screen sizes so no one is left out.<br>
 
 <b>It has however been optimised for portrait viewing on larger screens.</b>
-  
+
+![](/assets/img/linebreak.png) 
+
 ### Client Stories
 1) As a client, I want my branding to be visible in all possible scenarios.<br>
 2) As a client, I want the experience to be fluid to retain all clients.<br>
@@ -59,8 +76,12 @@ The UX has been designed to be user friendly and scales to all screen sizes so n
 9) As a user, I want the choice to be able to return to the homescreen at any point.<br>
 10) As a user, I want to see my life count at all times to see how close I am to passing/failing.<br>
 
+![](/assets/img/linebreak.png)
+
 ### Wireframe mockups
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
+
+![](/assets/img/linebreak.png)
 
 # Features
 <ul>
@@ -74,6 +95,8 @@ https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 </ul>
 
 ![](/assets/img/game.png)
+
+![](/assets/img/linebreak.png)
 
 ## Existing Features
 #### 1) Index - Instructions on how to play the game.<br>
@@ -89,6 +112,7 @@ https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 #### 8) Level 1/2/3 - After count down finishes, the user enters the incorrect combination 3 times and sees game over modal.<br>
 ![](/assets/img/ohno.PNG)<br>
 
+![](/assets/img/linebreak.png)
 
 ## Features for future
 ### Randomized Tile Combinations
@@ -119,6 +143,8 @@ For example; Level 1 has the largest tiles and is styled using the "grid-item-lg
 Again, going back to the randomized tile combinations future development - we will need to target the tiles using DOM manipulation, rather than class names.
 This would remove the need for seperate JS files.
 
+![](/assets/img/linebreak.png)
+
 # Technologies Used
 <ul>
   <li>HTML and CSS</li>
@@ -133,8 +159,12 @@ This would remove the need for seperate JS files.
   <li>GitHub Pages - To display the completed project</li>
 </ul>
 
+![](/assets/img/linebreak.png)
+
 # Testing
 testing.md file to be created once project complete
+
+![](/assets/img/linebreak.png)
 
 # Deployment
 ### This project was developed using MS Visual Studio Code and committed to my GitHub repository using GitHub Desktop.
@@ -150,6 +180,7 @@ testing.md file to be created once project complete
 #### 6) The page will refresh, scroll back down to GitHub Pages. The link to your deployment is at the top.<br>
 ![](/assets/img/published.PNG)<br>
 
+![](/assets/img/linebreak.png)
 
 # Running the project locally
 
@@ -166,7 +197,7 @@ testing.md file to be created once project complete
 ![](/assets/img/extractto.PNG)<br>
 #### 6) You can now open this folder using VS Code by clicking File > Open Folder<br>
 ![](/assets/img/openfolder2.PNG)<br>
-
+![](/assets/img/linebreak.png)
 # Credits
 All the code apart from the loading wheel on the congratulations modal was written by Anna Morrison. 
 The loading wheel was taken from W3Schools.com
