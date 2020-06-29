@@ -14,7 +14,7 @@ let correctTiles = $('.grid-item-md.correct');
 let incorrectTiles = $('.grid-item-md.incorrect');
 
 //countdown variable
-let countdown = document.getElementById("countdown-backdrop");
+let countdown = document.getElementById('countdown-backdrop');
 
 
 // function to display combination
