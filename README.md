@@ -1,6 +1,7 @@
 ![](/assets/img/orcaheader.PNG)
 
 # Memory Game - Orca Raffle
+<a href="https://annalouise500.github.io/milestone-memorygameorca/">View on GitHub Pages</a>
 
 ![](/assets/img/linebreak.png)
 
