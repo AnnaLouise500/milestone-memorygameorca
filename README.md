@@ -157,3 +157,6 @@ testing.md file to be created once project complete
 #### 6) You can now open this folder using VS Code by clicking File > Open Folder<br>
 ![](/assets/img/openfolder2.PNG)<br>
 
+# Credits
+All the code apart from the loading wheel on the congratulations modal was written by Anna Morrison. 
+The loading wheel was taken from W3Schools.com
