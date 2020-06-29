@@ -1,6 +1,6 @@
 ![](/assets/img/orcaheader.PNG)
 # Testing for Memory Game
-
+![](/assets/img/linebreak.png)
 ## Tools Used
 <ul>
   <li>W3C CSS Validation</li>
@@ -8,6 +8,7 @@
   <li>User Test Group/s</li>
 </ul>
 
+![](/assets/img/linebreak.png)
 ## User Perspective Testing
 #### 1) As a user of this site, it needs to be readable, intuitive and easy to use.
 No matter which stage of the game the user in on, there are modals and traditional styling used to help the player understand either what is required of them or what stage they are at.<br><br>A few examples of this are listed below:
@@ -31,6 +32,7 @@ We included a "I do not want to enter the prize draw" link at the bottom of each
 #### 5) As a user, I want to see my life count at all times to see how close I am to passing/failing.
 The life count background is a lot darker than the header to ensure it stands out, along with white font colour as it's been proven that people with sight difficulties find it easier to read light text on a darker background. The life count is clearly visible on all viewports, as a part of future development I may get the background colour to turn to red if the user has only 1 life remaining.
 
+![](/assets/img/linebreak.png)
 ## Client Requirement Testing
 #### 1) The pass rate of this game needs to be less than 85%<br><br>
 <b>Client</b>: <i>We understand that the features needed to capture this information at this point were too complex to fit into the timeframe. We are happy to have this included in our future feature roadmap.</i><br><br>
@@ -76,6 +78,7 @@ The life count background is a lot darker than the header to ensure it stands ou
 <b>Client</b>: <i>After testing we're happy this functionality exists and it isn't so obvious as to encourage the user to do so.</i><br><br>
 <b>Developer</b>: <i>We included a "I do not want to enter the prize draw" link at the bottom of each page however, I noticed on shorter screens this can sometimes be hidden. Normally on websites if you click their logo you will be taken to the homepage so I also added this link to the logo which is clearly visible on all viewport sizes.</i>
 
+![](/assets/img/linebreak.png)
 ## Functionality Testing
 1) Viewport Scaling
 
@@ -101,6 +104,7 @@ The life count background is a lot darker than the header to ensure it stands ou
 
 12) Next Level Modal
 
+![](/assets/img/linebreak.png)
 ## User Testing
 The memory game was passed to a few family members and friends to have a play around with. I picked a group who had varying screen sizes and technical abilities.<br>
 The main 2 points that came from the group are listed below:<br>
