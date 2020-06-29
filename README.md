@@ -63,14 +63,32 @@ The UX has been designed to be user friendly and scales to all screen sizes so n
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 
 # Features
-![](/assets/img/game.PNG)
+<ul>
+  <li>The final design as per the below, shows a header which is consistant across all 4 pages. This clearly displays the Orca logo as per the client requirements.</li>
+  <li>The logo also doubles as a home button as during user testing it was something mentioned by friends and family as being useful. </li>
+  <li>Each level has it's own tile grid which gets progressively smaller as you progress through the levels to increase the difficulty.</li>
+  <li>These tiles light up at the beginning of the level to display the correct combination for the user to repeat after the countdown completes.</li>
+  <li>The user repeats the tile combination and either passes or fails the level.</li>
+  <li>The life counter is located in the top righthand corner of the screen, if this hits 0 then the user has failed the level. They lose 1 life for each wrong choice.</li>
+  <li>Should the user pass they are presented with a modal which allows them to progress to the next level, or in the case of the final level (level 3) submit their tickets    into the live draw.</li>
+</ul>
 
-
+![](/assets/img/game.png)
 
 ## Existing Features
-<ul>
-  <li>List all functionality within the project at submission</li>
-</ul>
+#### 1) Index - Instructions on how to play the game.<br>
+#### 2) Index - Let's do this button takes the user to Level 1.<br>
+#### 3) Index & Level 1/2/3 - I do not want to enter the prize draw takes the user to the Orca Raffle Homepage.<br>
+#### 4) Level 1/2/3 - Begin button starts the display of the correct tiles.<br>
+#### 5) Level 1/2/3 - After correct tile display, the countdown modal appears.<br>
+![](/assets/img/getreadymodal.PNG)<br>
+#### 6) Level 1 & 2 - After count down finishes, the user enters the correct combination and sees next level modal.<br>
+![](/assets/img/pass.PNG)<br>
+#### 7) Level 3 - After count down finishes, the user enters the correct combination and sees the congratulations modal.<br>
+![](/assets/img/congrats.PNG)<br>
+#### 8) Level 1/2/3 - After count down finishes, the user enters the incorrect combination 3 times and sees game over modal.<br>
+![](/assets/img/ohno.PNG)<br>
+
 
 ## Features for future
 ### Randomized Tile Combinations
@@ -149,3 +167,6 @@ testing.md file to be created once project complete
 #### 6) You can now open this folder using VS Code by clicking File > Open Folder<br>
 ![](/assets/img/openfolder2.PNG)<br>
 
+# Credits
+All the code apart from the loading wheel on the congratulations modal was written by Anna Morrison. 
+The loading wheel was taken from W3Schools.com
