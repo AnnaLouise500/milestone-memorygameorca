@@ -63,13 +63,15 @@ The UX has been designed to be user friendly and scales to all screen sizes so n
 https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
 
 # Features
-The final design as per the below, shows a header which is consistant across all 4 pages. This clearly displays the Orca logo as per the client requirements. <br>
-The logo also doubles as a home button as during user testing it was something mentioned by friends and family as being useful. <br>
-Each level has it's own tile grid which gets progressively smaller as you progress through the levels to increase the difficulty.<br>
-These tiles light up at the beginning of the level to display the correct combination for the user to repeat after the countdown completes.<br>
-The user repeats the tile combination and either passes or fails the level.<br>
-Should the user pass they are presented with a modal which allows them to progress to the next level, or in the case of the final level (level 3) submit their tickets into 
-the live draw.<br>
+<ul>
+  <li>The final design as per the below, shows a header which is consistant across all 4 pages. This clearly displays the Orca logo as per the client requirements.</li>
+  <li>The logo also doubles as a home button as during user testing it was something mentioned by friends and family as being useful. </li>
+  <li>Each level has it's own tile grid which gets progressively smaller as you progress through the levels to increase the difficulty.</li>
+  <li>These tiles light up at the beginning of the level to display the correct combination for the user to repeat after the countdown completes.</li>
+  <li>The user repeats the tile combination and either passes or fails the level.</li>
+  <li>Should the user pass they are presented with a modal which allows them to progress to the next level, or in the case of the final level (level 3) submit their tickets    into the live draw.</li>
+</ul>
+<br>
 ![](/assets/img/game.png)
 
 ## Existing Features
