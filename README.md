@@ -71,7 +71,7 @@ https://xd.adobe.com/view/38d54322-fe73-4d8e-5337-7159aeb45447-4ee4/
   <li>The user repeats the tile combination and either passes or fails the level.</li>
   <li>Should the user pass they are presented with a modal which allows them to progress to the next level, or in the case of the final level (level 3) submit their tickets    into the live draw.</li>
 </ul>
-<br>
+
 ![](/assets/img/game.png)
 
 ## Existing Features
