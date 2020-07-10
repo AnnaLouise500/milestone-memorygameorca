@@ -82,39 +82,59 @@ The life count background is a lot darker than the header to ensure it stands ou
 ## Functionality Testing
 1) Viewport Scaling
 - All working and tested <br>
+  a) Viewed on multiple mobile devices<br>
+  b) Viewed on multiple desktop screen sizes<br>
 
 2) Horizontal Viewing
 - Horizontal viewing is possible on tablets and above but on mobiles needs to be disabled as half of the grid isn't on the screen.<br>
 
 3) Return to Orca Raffle Homepage Links
 - All working and tested <br>
+  a) Clicked all links & Logos to ensure that the homepage loads<br>
+  b) Completed the game to make sure it redirects to the homepage<br>
 
 4) Let's Do This Button
 - All working and tested <br>
+  a) Clicked to make sure level 1 loads<br>
 
 5) Begin Button Trigger
 - All working and tested <br>
+  a) Clicked on each level to ensure the tile combination function loads<br>
 
 6) Internal HTML change on Begin Button
 - All working and tested <br>
+  a) Played the game through all levels to ensure "Begin" turns to "Go" after countdown modal is complete<br>
 
 7) Tiles
 - All working and tested <br>
+  Played the game through all the levels to:<br>
+    a) Make sure the tile combinations show correctly<br>
+    b) That the incorrect tiles display as red<br>
+    c) That the correct tiles display as green<br>
+    
 
 8) Countdown modal
 - All working and tested <br>
+  a) After clicking "Begin" the tile combination shows<br>
+  b) This triggers the countdown modal which has a 3 second countdown<br>
+  c) The modal should disappear after the timer reaches 0<br>
 
 9) Life Counter
 - All working and tested <br>
-
+  a) When an incorrect tile is clicked, a life should be removed from the life counter<br>
+  
 10) Gameover Modal
 - All working and tested <br>
+  a) Once the life counter reaches 0 the game over modal should display<br>
 
 11) Congratulations Modal
 - All working and tested <br>
+  a) Upon completion of level 3, the congratulations modal should appear
+  b) After 8 seconds of the modal appearing the page should redirect to the Orca Site
 
 12) Next Level Modal
 - All working and tested <br>
+  a) Once all correct tiles have been clicked on each level, the next level modal displays<br>
 
 ![](/assets/img/linebreak.png)
 ## User Testing
